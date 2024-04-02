@@ -92,10 +92,6 @@
     margin-bottom: 100px;
   }
 
-  .offer_item_single {
-    padding: 25px 20px 25px 260px;
-  }
-
   .offer_item_single span {
     left: 165px;
   }
@@ -524,6 +520,7 @@
 
   .main_menu {
     top: 0;
+    height: 120px;
   }
 
   .main_menu .navbar-brand {
@@ -627,12 +624,12 @@
 
   .login {
     width: 400px;
-    height: 48px;
+    height: 60px;
     background-color: #fa6039;
     color: white;
     font-family: "Poppins";
     font-weight: 500;
-    font-size: 18px;
+    font-size: 25px;
     border: none;
     border-radius: 6px;
   }
@@ -656,7 +653,7 @@
   .vectorBox {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 60px;
     width: 457px;
     height: 406px;
   }
@@ -670,12 +667,12 @@
 
   .vectorButton {
     width: 400px;
-    height: 48px;
+    height: 60px;
     background-color: #000000;
     color: white;
     font-family: "Poppins";
     font-weight: 500;
-    font-size: 18px;
+    font-size: 25px;
     border: none;
     border-radius: 6px;
   }
@@ -1669,31 +1666,53 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 327px;
+    height: 209px;
+  }
+
+  .contacts-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 327px;
+    gap: 20px;
+  }
+
+  .contacts-img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contacts-box {
+    width: 300px;
+    display: flex;
+    gap: 10px;
   }
 
   #imageContent {
-    width: 180px;
-    height: 230px;
+    width: 172px;
+    height: 200px;
   }
 
   .vector {
-    width: 34px;
-    height: 34px;
+    width: 18px;
+    height: 18px;
   }
 
   .vectorBox {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 457px;
+    height: 207px;
+    width: 155px;
   }
 
   .vectorItem {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 34px;
-    gap: 32px;
+    justify-content: start;
+    gap: 10px;
   }
 
   .vector_item_box {
@@ -1730,12 +1749,13 @@
   .vector_font {
     font-family: "DM Sans";
     font-weight: 400;
+    font-size: 15px;
   }
 
   .banner_title {
     font-family: "Playfair Display";
     font-weight: 400;
-    font-size: 30px;
+    font-size: 25px;
     margin: 0;
   }
 
