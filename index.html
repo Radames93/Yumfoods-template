@@ -7,7 +7,12 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"
     />
     <title>YumFoods</title>
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/slick.css" />
@@ -44,16 +49,27 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav m-auto">
             <li class="nav-item">
-              <a class="nav-link" href="menu.html">menu</a>
+              <a class="nav-link" href="#"
+                >menu <i class="far fa-angle-down"></i
+              ></a>
+              <ul class="droap_menu">
+                <li><a href="menu.html">Bamba-rätter</a></li>
+                <li><a href="yum_menu.html">Yum-rätter</a></li>
+                <li><a href="daily_menu.html">Dagens-rätter</a></li>
+                <li><a href="premium_menu.html">Premium-rätter</a></li>
+              </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="subscription.html">subscription</a>
+              <a class="nav-link" href="subscription.html">Prenumerationer</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blogs.html">About us/Blog/Podcast</a>
+              <a class="nav-link" href="about.html">Om oss</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">contact us</a>
+              <a class="nav-link" href="blogs.html">Blog/Podcast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Kontakt oss</a>
             </li>
           </ul>
           <ul class="menu_icon d-flex flex-wrap">
@@ -84,39 +100,22 @@
                     alt="content"
                   />
                   <div class="vectorBox">
-                    <p class="banner_title">Best food for your taste</p>
-                    <div class="vectorItem">
-                      <img
-                        class="vector"
-                        src="./images/Vector.png"
-                        alt="vector"
-                      />
-                      <p class="vector_font">Good food</p>
-                    </div>
-                    <div class="vectorItem">
-                      <img
-                        class="vector"
-                        src="./images/Vector.png"
-                        alt="vector"
-                      />
-                      <p class="vector_font">Good taste</p>
-                    </div>
-                    <div class="vectorItem">
-                      <img
-                        class="vector"
-                        src="./images/Vector.png"
-                        alt="vector"
-                      />
-                      <p class="vector_font">Good food</p>
-                    </div>
+                    <p class="banner_title">Lite Billigare Lika Yum</p>
+                    <p class="banner_text h1">En mångkulturell matupplevelse</p>
                   </div>
                 </div>
                 <div class="vector_item_box">
-                  <input class="login" type="button" value="Login/Sign up" />
                   <input
+                    onclick="location.href = 'sign_in.html';"
+                    class="login"
+                    type="button"
+                    value="logga in"
+                  />
+                  <input
+                    onclick="location.href = 'sign_up.html';"
                     class="vectorButton"
                     type="button"
-                    value="Continue as a guest"
+                    value="skapa konto"
                   />
                 </div>
               </div>
@@ -253,25 +252,18 @@
       </div>
     </div>
     <!-- CART POPUT END -->
-    <!--=============================
-        OFFER ITEM END
-    ==============================-->
 
     <!--=============================
-        OFFER START
-    ==============================-->
-
-    <!--=============================
-        PREMIUM RÄTT
+        BAMBA RÄTTER
     ==============================-->
     <section class="team mt_100 xs_mt_70 pt_95 xs_pt_65 pb_95 xs_pb_65">
       <div class="container">
         <div class="row wow fadeInUp" data-wow-duration="1s">
           <div class="col-md-8 col-lg-7 col-xl-6">
             <div class="section_heading mb_25">
-              <h2>What do we offer?</h2>
+              <h2>Våra menyer</h2>
             </div>
-            <h3>Premium rätt starting 129 KR</h3>
+            <h3>Bambarätter med ett pris av 55 kr per rätt</h3>
           </div>
         </div>
         <div class="row team_slider">
@@ -286,10 +278,7 @@
               </div>
               <div class="single_team_text">
                 <h4>Chicken</h4>
-                <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
-                </p>
+                <p>Erbjuder en snabb och prisvärd matupplevelse</p>
               </div>
             </div>
           </div>
@@ -304,10 +293,7 @@
               </div>
               <div class="single_team_text">
                 <h4>Meat</h4>
-                <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
-                </p>
+                <p>Erbjuder en snabb och prisvärd matupplevelse</p>
               </div>
             </div>
           </div>
@@ -322,10 +308,7 @@
               </div>
               <div class="single_team_text">
                 <h4>Pizza</h4>
-                <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
-                </p>
+                <p>Erbjuder en snabb och prisvärd matupplevelse</p>
               </div>
             </div>
           </div>
@@ -340,10 +323,7 @@
               </div>
               <div class="single_team_text">
                 <h4>Pasta</h4>
-                <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
-                </p>
+                <p>Erbjuder en snabb och prisvärd matupplevelse</p>
               </div>
             </div>
           </div>
@@ -358,22 +338,22 @@
               </div>
               <div class="single_team_text">
                 <h4>Chicken</h4>
-                <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
-                </p>
+                <p>Erbjuder en snabb och prisvärd matupplevelse</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <!--=============================
-        SNABB RÄTT
+        YUM RÄTT
     ==============================-->
       <div class="container">
         <div class="row wow fadeInUp" data-wow-duration="1s">
           <div class="col-md-8 col-lg-7 col-xl-6">
-            <h3 class="title_container">Snabb rätt starting 69 KR</h3>
+            <h3 class="title_container">
+              Yum rätt med ett pris av 75kr per portion
+            </h3>
           </div>
         </div>
         <div class="row team_slider">
@@ -389,8 +369,8 @@
               <div class="single_team_text">
                 <h4>Chicken</h4>
                 <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
+                  Innehåller traditionella svenska och orientaliska rätter som
+                  tillagas med kärlek och omsorg
                 </p>
               </div>
             </div>
@@ -407,8 +387,8 @@
               <div class="single_team_text">
                 <h4>Meat</h4>
                 <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
+                  Innehåller traditionella svenska och orientaliska rätter som
+                  tillagas med kärlek och omsorg
                 </p>
               </div>
             </div>
@@ -425,8 +405,8 @@
               <div class="single_team_text">
                 <h4>Pizza</h4>
                 <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
+                  Innehåller traditionella svenska och orientaliska rätter som
+                  tillagas med kärlek och omsorg
                 </p>
               </div>
             </div>
@@ -443,8 +423,8 @@
               <div class="single_team_text">
                 <h4>Pasta</h4>
                 <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
+                  Innehåller traditionella svenska och orientaliska rätter som
+                  tillagas med kärlek och omsorg
                 </p>
               </div>
             </div>
@@ -461,8 +441,8 @@
               <div class="single_team_text">
                 <h4>Chicken</h4>
                 <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
+                  Innehåller traditionella svenska och orientaliska rätter som
+                  tillagas med kärlek och omsorg
                 </p>
               </div>
             </div>
@@ -475,7 +455,10 @@
       <div class="container">
         <div class="row wow fadeInUp" data-wow-duration="1s">
           <div class="col-md-8 col-lg-7 col-xl-6">
-            <h3 class="title_container">Dagens rätt starting 99 KR</h3>
+            <h3 class="title_container">
+              Dagens rätt med ett pris av 95kr per portion och samma pris per
+              pizza
+            </h3>
           </div>
         </div>
         <div class="row team_slider">
@@ -490,10 +473,7 @@
               </div>
               <div class="single_team_text">
                 <h4>Chicken</h4>
-                <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
-                </p>
+                <p>Serverar färska och nygjorda rätter direkt från köket</p>
               </div>
             </div>
           </div>
@@ -508,10 +488,7 @@
               </div>
               <div class="single_team_text">
                 <h4>Meat</h4>
-                <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
-                </p>
+                <p>Serverar färska och nygjorda rätter direkt från köket</p>
               </div>
             </div>
           </div>
@@ -526,10 +503,7 @@
               </div>
               <div class="single_team_text">
                 <h4>Pizza</h4>
-                <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
-                </p>
+                <p>Serverar färska och nygjorda rätter direkt från köket</p>
               </div>
             </div>
           </div>
@@ -544,10 +518,7 @@
               </div>
               <div class="single_team_text">
                 <h4>Pasta</h4>
-                <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
-                </p>
+                <p>Serverar färska och nygjorda rätter direkt från köket.</p>
               </div>
             </div>
           </div>
@@ -562,9 +533,110 @@
               </div>
               <div class="single_team_text">
                 <h4>Chicken</h4>
+                <p>Serverar färska och nygjorda rätter direkt från köket</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--=============================
+        PREMIUM RÄTT
+    ==============================-->
+      <div class="container">
+        <div class="row wow fadeInUp" data-wow-duration="1s">
+          <div class="col-md-8 col-lg-7 col-xl-6">
+            <h3 class="title_container">
+              Premium rätt med ett pris av 115kr per portion
+            </h3>
+          </div>
+        </div>
+        <div class="row team_slider">
+          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
+            <div class="single_team">
+              <div class="single_team_img">
+                <img
+                  src="images/premium-rätt.png"
+                  alt="team"
+                  class="img-fluid w-100"
+                />
+              </div>
+              <div class="single_team_text">
+                <h4>Chicken</h4>
                 <p>
-                  In the new era of technology we look in the future with
-                  certainty and pride for our life.
+                  Erbjuder autentiska svenska rätter som tillagas från grunden
+                  med noggrannhet
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
+            <div class="single_team">
+              <div class="single_team_img">
+                <img
+                  src="images/premium-rätt.png"
+                  alt="team"
+                  class="img-fluid w-100"
+                />
+              </div>
+              <div class="single_team_text">
+                <h4>Meat</h4>
+                <p>
+                  Erbjuder autentiska svenska rätter som tillagas från grunden
+                  med noggrannhet
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
+            <div class="single_team">
+              <div class="single_team_img">
+                <img
+                  src="images/premium-rätt.png"
+                  alt="team"
+                  class="img-fluid w-100"
+                />
+              </div>
+              <div class="single_team_text">
+                <h4>Pizza</h4>
+                <p>
+                  Erbjuder autentiska svenska rätter som tillagas från grunden
+                  med noggrannhet
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
+            <div class="single_team">
+              <div class="single_team_img">
+                <img
+                  src="images/premium-rätt.png"
+                  alt="team"
+                  class="img-fluid w-100"
+                />
+              </div>
+              <div class="single_team_text">
+                <h4>Pasta</h4>
+                <p>
+                  Erbjuder autentiska svenska rätter som tillagas från grunden
+                  med noggrannhet
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
+            <div class="single_team">
+              <div class="single_team_img">
+                <img
+                  src="images/premium-rätt.png"
+                  alt="team"
+                  class="img-fluid w-100"
+                />
+              </div>
+              <div class="single_team_text">
+                <h4>Chicken</h4>
+                <p>
+                  Erbjuder autentiska svenska rätter som tillagas från grunden
+                  med noggrannhet
                 </p>
               </div>
             </div>
@@ -584,7 +656,7 @@
         <div class="row wow fadeInUp" data-wow-duration="1s">
           <div class="col-md-8 col-lg-7 col-xl-6">
             <div class="section_heading mb_25">
-              <h2>subscriptions</h2>
+              <h2>Prenumerationer</h2>
             </div>
           </div>
         </div>
@@ -601,7 +673,7 @@
                   >All Inclusive – 1 person/vecka</a
                 >
                 <p class="subscription_paragraph">69 kr</p>
-                <p class="subscription_paragraph">In stock</p>
+                <p class="subscription_paragraph">I lager</p>
                 <ul class="d-flex flex-wrap">
                   <li>
                     <a
@@ -633,7 +705,7 @@
                   >All Inclusive – 1 person/vecka</a
                 >
                 <p class="subscription_paragraph">69 kr</p>
-                <p class="subscription_paragraph">In stock</p>
+                <p class="subscription_paragraph">I lager</p>
                 <ul class="d-flex flex-wrap">
                   <li>
                     <a
@@ -665,7 +737,7 @@
         <div class="row wow fadeInUp text-center" data-wow-duration="1s">
           <div class="col-md-8 col-lg-7 col-xl-12">
             <div class="section_heading mb_25">
-              <h2>We also offer unique services.</h2>
+              <h2>Vi erbjuder även unika tjänster.</h2>
             </div>
             <div class="contacts-content contacts">
               <div class="contacts-box">
@@ -674,11 +746,11 @@
                   src="./images/phone.png"
                   alt="phone"
                 />
-                <p>07038895785</p>
+                <p>+46 76 005 56 58</p>
               </div>
               <div class="contacts-box">
                 <img class="contacts-img" src="./images/mail.png" alt="mail" />
-                <p>Mamasmatt.com</p>
+                <p>josef.jabarkhel@yumfoods.se</p>
               </div>
               <div class="contacts-box">
                 <img
@@ -686,10 +758,7 @@
                   src="./images/location-marker.png"
                   alt="location"
                 />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Amet habitant
-                  lobortis.
-                </p>
+                <p>Stora Badhusgatan 18, 411 21 Göteborg</p>
               </div>
             </div>
           </div>
@@ -705,8 +774,8 @@
                 />
               </div>
               <div class="single_team_text">
-                <h4>Caterings</h4>
-                <p>Daily / Weekly delivery / Group orders</p>
+                <h4>Kontor</h4>
+                <p>Daglig / Veckovis leverans / Gruppbeställningar</p>
               </div>
             </div>
           </div>
@@ -720,8 +789,8 @@
                 />
               </div>
               <div class="single_team_text">
-                <h4>Private</h4>
-                <p>Daily / Weekly delivery / Family orders</p>
+                <h4>Privat</h4>
+                <p>Daglig / Veckovis leverans / Familjbeställningar</p>
               </div>
             </div>
           </div>
@@ -735,10 +804,10 @@
                 />
               </div>
               <div class="single_team_text">
-                <h4>Caterings</h4>
+                <h4>Caterins</h4>
                 <p>
-                  Order for your special event
-                  <span style="opacity: 0">speical event</span>
+                  Beställ för din speciella händelse
+                  <span style="opacity: 0">special event</span>
                 </p>
               </div>
             </div>
@@ -755,8 +824,8 @@
         <div class="row wow fadeInUp" data-wow-duration="1s">
           <div class="col-md-8 col-lg-7 col-xl-6">
             <div class="section_heading mb_25">
-              <h4>news & blogs</h4>
-              <h2>our blog and podcast</h2>
+              <h4>nyheter & blog</h4>
+              <h2>vår blog and podcast</h2>
             </div>
           </div>
         </div>
@@ -773,14 +842,14 @@
               </div>
               <div class="single_blog_author">
                 <div class="text">
-                  <p>14 May 2023</p>
+                  <p>14 maj 2023</p>
                 </div>
               </div>
               <div class="single_blog_text">
                 <a class="category" href="#">food</a>
                 <a class="title" href="blog_details.html"
-                  >The secret tips & tricks to prepare a perfect burger & pizza
-                  for our customers</a
+                  >De hemliga tipsen & tricken för att förbereda en perfekt
+                  hamburgare & pizza till våra kunder</a
                 >
                 <p>
                   Lorem ipsum dolor sit amet consectetur of a adipiscing
@@ -789,7 +858,7 @@
                 </p>
                 <div class="single_blog_footer">
                   <a class="read_btn" href="blog_details.html"
-                    >read more <i class="far fa-long-arrow-right"></i
+                    >läs mer <i class="far fa-long-arrow-right"></i
                   ></a>
                   <span><i class="far fa-comments"></i> 120</span>
                 </div>
@@ -813,7 +882,8 @@
               <div class="single_blog_text">
                 <a class="category" href="#">restaurent</a>
                 <a class="title" href="blog_details.html"
-                  >How to prepare the perfect french fries in an air fryer</a
+                  >Hur man förbereder den perfekta pommes fritesen i en
+                  airfryer</a
                 >
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -821,7 +891,7 @@
                 </p>
                 <div class="single_blog_footer">
                   <a class="read_btn" href="blog_details.html"
-                    >read more <i class="far fa-long-arrow-right"></i
+                    >läs mer <i class="far fa-long-arrow-right"></i
                   ></a>
                   <span><i class="far fa-comments"></i> 120</span>
                 </div>
@@ -845,7 +915,7 @@
               <div class="single_blog_text">
                 <a class="category" href="#">podcast</a>
                 <a class="title" href="blog_details.html"
-                  >Text about podcast
+                  >Om podcast
                   <span style="opacity: 0"
                     >Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   </span></a
@@ -856,7 +926,7 @@
                 </p>
                 <div class="single_blog_footer">
                   <a class="read_btn" href="blog_details.html"
-                    >read more <i class="far fa-long-arrow-right"></i
+                    >läs mer <i class="far fa-long-arrow-right"></i
                   ></a>
                   <span><i class="far fa-comments"></i> 120</span>
                 </div>
@@ -880,7 +950,7 @@
               <div class="single_blog_text">
                 <a class="category" href="#">party</a>
                 <a class="title" href="blog_details.html"
-                  >7 delicious cheesecake recipes you can prepare</a
+                  >7 läckra cheesecake-recept du kan förbereda</a
                 >
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -888,7 +958,7 @@
                 </p>
                 <div class="single_blog_footer">
                   <a class="read_btn" href="blog_details.html"
-                    >read more <i class="far fa-long-arrow-right"></i
+                    >läs mer <i class="far fa-long-arrow-right"></i
                   ></a>
                   <span><i class="far fa-comments"></i> 120</span>
                 </div>
@@ -912,7 +982,7 @@
               <div class="single_blog_text">
                 <a class="category" href="#">podcast</a>
                 <a class="title" href="blog_details.html"
-                  >Text about podcast
+                  >Om podcast
                   <span style="opacity: 0"
                     >Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   </span></a
@@ -923,7 +993,7 @@
                 </p>
                 <div class="single_blog_footer">
                   <a class="read_btn" href="blog_details.html"
-                    >read more <i class="far fa-long-arrow-right"></i
+                    >läs mer <i class="far fa-long-arrow-right"></i
                   ></a>
                   <span><i class="far fa-comments"></i> 120</span>
                 </div>
@@ -977,34 +1047,34 @@
             </div>
             <div class="col-xxl-2 col-lg-2 col-sm-5 col-md-5">
               <div class="footer_content">
-                <h3>Short Link</h3>
                 <ul>
                   <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Our Service</a></li>
-                  <li><a href="#">gallery</a></li>
+                  <li><a href="#">Om oss</a></li>
+                  <li><a href="#">Kontakta oss</a></li>
+                  <li><a href="#">Vår Service</a></li>
+                  <li><a href="#">Galleri</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-xxl-2 col-lg-2 col-sm-6 col-md-5 order-md-4">
               <div class="footer_content">
-                <h3>Help Link</h3>
                 <ul>
-                  <li><a href="#">Terms & Conditions</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Refund Policy</a></li>
+                  <li><a href="#">Allmänna Villkor</a></li>
+                  <li><a href="#">Integritetspolicy</a></li>
+                  <li><a href="#">Återbetalningspolicy</a></li>
                   <li><a href="#">FAQ</a></li>
-                  <li><a href="#">contact</a></li>
+                  <li><a href="#">kontakt</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-xxl-3 col-lg-4 col-sm-9 col-md-7 order-lg-4">
               <div class="footer_content">
-                <h3>contact us</h3>
-                <p class="info"><i class="fas fa-phone-alt"></i> 0760234930</p>
+                <h3>kontakta oss</h3>
                 <p class="info">
-                  <i class="fas fa-envelope"></i> info@yumfoods.com
+                  <i class="fas fa-phone-alt"></i> +46 76 005 56 58
+                </p>
+                <p class="info">
+                  <i class="fas fa-envelope"></i> josef.jabarkhel@yumfoods.se
                 </p>
                 <p class="info">
                   <i class="far fa-map-marker-alt"></i> Stora Badhusgatan 18,
