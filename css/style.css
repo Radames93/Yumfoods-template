@@ -496,7 +496,7 @@ button {
   visibility: visible;
 }
 
-.main_menu .menu_icon {
+.main_menu_icon {
   align-items: center;
 }
 
@@ -1454,7 +1454,7 @@ button {
   left: -12px;
   bottom: 25px;
   background: var(--colorPrimary);
-  padding: 6px 25px 6px 25px;
+  padding: 6px 10px 6px 10px;
   text-transform: capitalize;
   font-size: 16px;
   font-weight: 600;
@@ -3724,9 +3724,17 @@ footer {
   overflow: hidden;
 }
 
-.details_size,
-.details_extra_item,
+.details_size {
+  margin-bottom: 30px;
+}
+.details_extra_item {
+  margin-bottom: 30px;
+}
 .details_quentity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 30px;
 }
 

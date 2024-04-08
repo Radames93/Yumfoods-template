@@ -1756,6 +1756,15 @@
     font-size: 15px;
   }
 
+  .details_quentity {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    justify-items: start;
+    align-items: unset;
+    gap: 10px;
+  }
+
   .banner_title {
     font-family: "Manrope";
     font-weight: 400;
