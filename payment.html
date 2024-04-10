@@ -6,8 +6,13 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"
     />
-    <title>RegFood || Restaurant HTML Template</title>
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>YumFoods</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/slick.css" />
@@ -87,42 +92,27 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav m-auto">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">about</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="menu.html">menu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="chefs.html">chefs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#"
-                >pages <i class="far fa-angle-down"></i
+              <a class="nav-link" href="#"
+                >menu <i class="far fa-angle-down"></i
               ></a>
               <ul class="droap_menu">
-                <li><a href="menu_details.html">menu details</a></li>
-                <li><a href="blog_details.html">blog details</a></li>
-                <li><a href="cart_view.html">cart view</a></li>
-                <li><a href="check_out.html">checkout</a></li>
-                <li><a class="active" href="payment.html">payment</a></li>
-                <li><a href="testimonial.html">testimonial</a></li>
-                <li><a href="404.html">404/Error</a></li>
-                <li><a href="faq.html">FAQs</a></li>
-                <li><a href="sign_in.html">sign in</a></li>
-                <li><a href="sign_up.html">sign up</a></li>
-                <li><a href="forgot_password.html">forgot password</a></li>
-                <li><a href="privacy_policy.html">privacy policy</a></li>
-                <li><a href="terms_condition.html">terms and condition</a></li>
+                <li><a href="menu.html">Bamba-rätter</a></li>
+                <li><a href="yum_menu.html">Yum-rätter</a></li>
+                <li><a href="daily_menu.html">Dagens-rätter</a></li>
+                <li><a href="premium_menu.html">Premium-rätter</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blogs.html">blog</a>
+              <a class="nav-link" href="subscription.html">Prenumerationer</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">contact</a>
+              <a class="nav-link" href="about.html">Om oss</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogs.html">Blog/Podcast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Kontakt oss</a>
             </li>
           </ul>
           <ul class="menu_icon d-flex flex-wrap">
@@ -145,17 +135,14 @@
     <!--=============================
         BREADCRUMB START
     ==============================-->
-    <section
-      class="page_breadcrumb"
-      style="background: url(images/counter_bg.jpg)"
-    >
+    <section class="page_breadcrumb" style="background: url(images/cover.png)">
       <div class="breadcrumb_overlay">
         <div class="container">
           <div class="breadcrumb_text">
-            <h1>payment</h1>
+            <h1>betalning</h1>
             <ul>
               <li><a href="index.html">home</a></li>
-              <li><a href="#">payment</a></li>
+              <li><a href="#">betalning</a></li>
             </ul>
           </div>
         </div>
@@ -181,7 +168,7 @@
                   <a
                     class="single_payment"
                     data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
+                    data-bs-target="#paypalModal"
                     href="#"
                   >
                     <img
@@ -247,25 +234,29 @@
             </div>
           </div>
 
-          <div class="col-lg-4 wow fadeInUp" data-wow-duration="1s">
+          <div class="col-xl-4 col-lg-5 wow fadeInUp" data-wow-duration="1s">
             <div id="sticky_sidebar" class="cart_list_footer_button">
               <div class="cart_list_footer_button_text">
-                <h6>total cart (02)</h6>
-                <p>subtotal: <span>$124.00</span></p>
-                <p>delivery: <span>$00.00</span></p>
-                <p>discount: <span>$10.00</span></p>
-                <p class="total"><span>total:</span> <span>$134.00</span></p>
+                <h6>total</h6>
+                <p>delsumma: <span>285kr</span></p>
+                <p>leverans: <span>0kr</span></p>
+                <p>rabatt: <span>10kr</span></p>
+                <p class="total"><span>total:</span> <span>295.00kr</span></p>
                 <form>
-                  <input type="text" placeholder="Coupon Code" />
-                  <button type="submit">apply</button>
+                  <input type="text" placeholder=" Rabattkod" />
+                  <button type="submit">använda</button>
                 </form>
-                <a class="common_btn" href="check_out.html">checkout</a>
+                <a class="common_btn" href="payment.html">Betala</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!--============================
+        CREDIT MODAL PAGE START
+    ==============================-->
 
     <div class="payment_modal">
       <div
@@ -283,135 +274,147 @@
                 "
               >
                 <div class="row d-flex justify-content-center">
-                  <div class="">
-                    <div class="card rounded-3">
-                      <div class="card card-body p-4">
-                        <form>
-                          <div class="text-center mb-4">
-                            <h3>Settings</h3>
-                            <h6>Payment</h6>
-                            <div class="d-flex flex-row align-items-center">
-                              <img
-                                class="img-fluid"
-                                src="https://img.icons8.com/color/48/000000/mastercard-logo.png"
-                              />
-                              <div class="card-body">
-                                <div class="col px-1 mb-2">
-                                  <label
-                                    for="input1"
-                                    class="ms-2 position-absolute"
-                                    style="margin-top: -0.25rem !important"
-                                  >
-                                    <span
-                                      class="h6 small bg-white text-muted px-1"
-                                      >Username</span
-                                    >
-                                  </label>
-                                  <input
-                                    type="text"
-                                    class="form-control mt-2"
-                                    id="input1"
-                                  />
-                                </div>
-                              </div>
-                              <a href="#!">Remove card</a>
-                            </div>
-                            <div
-                              class="d-flex flex-row align-items-center mb-4 pb-1"
-                            >
-                              <img
-                                class="img-fluid"
-                                src="https://img.icons8.com/color/48/000000/visa.png"
-                              />
-                              <div class="flex-fill mx-3">
-                                <div data-mdb-input-init class="form-outline">
-                                  <input
-                                    type="text"
-                                    id="formControlLgXs"
-                                    class="form-control form-control-lg"
-                                    value="**** **** **** 4296"
-                                  />
-                                  <label
-                                    class="form-label"
-                                    for="formControlLgXs"
-                                    >Card Number</label
-                                  >
-                                </div>
-                              </div>
-                              <a href="#!">Remove card</a>
-                            </div>
-
-                            <p class="fw-bold mb-4">Add new card:</p>
-
-                            <div data-mdb-input-init class="form-outline mb-4">
+                  <div class="card rounded-3 border-0">
+                    <div class="card card-body p-4">
+                      <div class="text-center mb-4">
+                        <h3>Inställningar</h3>
+                        <h6>Betalning</h6>
+                      </div>
+                      <form class="card card-body">
+                        <div class="row">
+                          <div class="d-flex align-items-center">
+                            <img
+                              class="img-fluid"
+                              src="https://img.icons8.com/color/48/000000/mastercard-logo.png"
+                            />
+                            <div class="col px-1 mb-2">
+                              <label
+                                for="input2"
+                                class="ms-2 position-absolute"
+                                style="margin-top: -0.25rem !important"
+                              >
+                                <span class="h6 small bg-white text-muted px-1"
+                                  >Kortnummer</span
+                                >
+                              </label>
                               <input
                                 type="text"
-                                id="formControlLgXsd"
-                                class="form-control form-control-lg"
-                                value="Anna Doe"
+                                class="form-control mt-2"
+                                id="input2"
+                                placeholder="**** **** **** 4296"
                               />
-                              <label class="form-label" for="formControlLgXsd"
-                                >Cardholder's Name</label
-                              >
                             </div>
-                            <div class="row mb-4">
-                              <div class="col-7">
-                                <div data-mdb-input-init class="form-outline">
-                                  <input
-                                    type="text"
-                                    id="formControlLgXM"
-                                    class="form-control form-control-lg"
-                                    value="1234 5678 1234 5678"
-                                  />
-                                  <label
-                                    class="form-label"
-                                    for="formControlLgXM"
-                                    >Card Number</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-3">
-                                <div data-mdb-input-init class="form-outline">
-                                  <input
-                                    type="password"
-                                    id="formControlLgExpk"
-                                    class="form-control form-control-lg"
-                                    placeholder="MM/YYYY"
-                                  />
-                                  <label
-                                    class="form-label"
-                                    for="formControlLgExpk"
-                                    >Expire</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-2">
-                                <div data-mdb-input-init class="form-outline">
-                                  <input
-                                    type="password"
-                                    id="formControlLgcvv"
-                                    class="form-control form-control-lg"
-                                    placeholder="Cvv"
-                                  />
-                                  <label
-                                    class="form-label"
-                                    for="formControlLgcvv"
-                                    >Cvv</label
-                                  >
-                                </div>
-                              </div>
-                            </div>
-
-                            <button
-                              data-mdb-button-init
-                              data-mdb-ripple-init
-                              class="btn btn-success btn-lg btn-block"
-                            >
-                              Add card
-                            </button>
+                            <a href="#!">Ta bort kort</a>
                           </div>
-                        </form>
-                      </div>
+                          <div
+                            class="d-flex flex-row align-items-center mb-4 pb-1"
+                          >
+                            <img
+                              class="img-fluid"
+                              src="https://img.icons8.com/color/48/000000/visa.png"
+                            />
+                            <div class="col px-1 mb-2">
+                              <label
+                                for="input2"
+                                class="ms-2 position-absolute"
+                                style="margin-top: -0.25rem !important"
+                              >
+                                <span class="h6 small bg-white text-muted px-1"
+                                  >Kortnummer</span
+                                >
+                              </label>
+                              <input
+                                type="text"
+                                class="form-control mt-2"
+                                id="input2"
+                                placeholder="**** **** **** 4296"
+                              />
+                            </div>
+                            <a href="#!">Ta bort kort</a>
+                          </div>
+
+                          <p class="fw-bold mb-4">Lägg till nytt kort:</p>
+
+                          <div class="col-12 px-1 mb-2">
+                            <label
+                              for="input2"
+                              class="ms-2 position-absolute"
+                              style="margin-top: -0.25rem !important"
+                            >
+                              <span class="h6 small bg-white text-muted px-1"
+                                >Kortinnehavarensnamn</span
+                              >
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control mt-2"
+                              id="input2"
+                              placeholder="Anne Doe"
+                            />
+                          </div>
+                          <div class="row mb-4">
+                            <div class="col-7 px-1 mb-2">
+                              <label
+                                for="input2"
+                                class="ms-2 position-absolute"
+                                style="margin-top: -0.25rem !important"
+                              >
+                                <span class="h6 small bg-white text-muted px-1"
+                                  >Kortnummer</span
+                                >
+                              </label>
+                              <input
+                                type="text"
+                                class="form-control mt-2"
+                                id="input2"
+                                placeholder="**** **** **** 4296"
+                              />
+                            </div>
+                            <div class="col-3 px-1 mb-2">
+                              <label
+                                for="input2"
+                                class="ms-2 position-absolute"
+                                style="margin-top: -0.25rem !important"
+                              >
+                                <span class="h6 small bg-white text-muted px-1"
+                                  >Expire</span
+                                >
+                              </label>
+                              <input
+                                type="password"
+                                class="form-control mt-2"
+                                id="input2"
+                                placeholder="MM/YYYY"
+                              />
+                            </div>
+                            <div class="col-2 px-1 mb-2">
+                              <label
+                                for="input2"
+                                class="ms-2 position-absolute"
+                                style="margin-top: -0.25rem !important"
+                              >
+                                <span class="h6 small bg-white text-muted px-1"
+                                  >Cvv</span
+                                >
+                              </label>
+                              <input
+                                type="password"
+                                class="form-control mt-2"
+                                id="input2"
+                                placeholder="Cvv"
+                              />
+                            </div>
+                          </div>
+
+                          <button
+                            data-mdb-button-init
+                            data-mdb-ripple-init
+                            class="btn common_btn btn-lg btn-block"
+                          >
+                            Lägg till kort
+                          </button>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -421,6 +424,74 @@
         </div>
       </div>
     </div>
+
+    <!--============================
+        CREDIT MODAL PAGE START
+    ==============================-->
+
+    <!--============================
+        PAYPAL MODAL PAGE START
+    ==============================-->
+
+    <div class="payment_modal">
+      <div class="modal fade" id="paypalModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <section
+                style="
+                  background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Others/background3.webp);
+                "
+              >
+                <div class="row d-flex justify-content-center">
+                  <div class="card rounded-3 border-0">
+                    <div class="card card-body p-4">
+                      <div class="text-center mb-4">
+                        <h3>Inställningar</h3>
+                        <h6>Betalning</h6>
+                      </div>
+                      <form class="card card-body">
+                        <div class="row">
+                          <div class="col-12 px-1 mb-2">
+                            <label
+                              for="input2"
+                              class="ms-2 position-absolute"
+                              style="margin-top: -0.25rem !important"
+                            >
+                              <span class="h6 small bg-white text-muted px-1"
+                                >Paypal mejladress</span
+                              >
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control mt-2"
+                              id="input2"
+                              placeholder="example@gmail.com"
+                            />
+                          </div>
+                          <button
+                            data-mdb-button-init
+                            data-mdb-ripple-init
+                            class="btn common_btn btn-lg btn-block"
+                          >
+                            Lägg till paypal
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--============================
+        PAYPAL MODAL PAGE START
+    ==============================-->
+
     <!--============================
         PAYMENT PAGE END
     ==============================-->
@@ -437,15 +508,10 @@
                 <a class="footer_logo" href="index.html">
                   <img
                     src="images/footer_logo.png"
-                    alt="RegFood"
-                    class="img-fluid w-100"
+                    alt="YumFoods"
+                    class="img-fluid w-100 mb_25"
                   />
                 </a>
-                <span
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Soluta facere delectus qui placeat inventore consectetur
-                  repellendus optio debitis.</span
-                >
                 <ul class="social_link d-flex flex-wrap">
                   <li>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -470,40 +536,38 @@
             </div>
             <div class="col-xxl-2 col-lg-2 col-sm-5 col-md-5">
               <div class="footer_content">
-                <h3>Short Link</h3>
                 <ul>
                   <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Our Service</a></li>
-                  <li><a href="#">gallery</a></li>
+                  <li><a href="#">Om oss</a></li>
+                  <li><a href="#">Kontakta oss</a></li>
+                  <li><a href="#">Vår Service</a></li>
+                  <li><a href="#">Galleri</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-xxl-2 col-lg-2 col-sm-6 col-md-5 order-md-4">
               <div class="footer_content">
-                <h3>Help Link</h3>
                 <ul>
-                  <li><a href="#">Terms & Conditions</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Refund Policy</a></li>
+                  <li><a href="#">Allmänna Villkor</a></li>
+                  <li><a href="#">Integritetspolicy</a></li>
+                  <li><a href="#">Återbetalningspolicy</a></li>
                   <li><a href="#">FAQ</a></li>
-                  <li><a href="#">contact</a></li>
+                  <li><a href="#">kontakt</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-xxl-3 col-lg-4 col-sm-9 col-md-7 order-lg-4">
               <div class="footer_content">
-                <h3>contact us</h3>
+                <h3>kontakta oss</h3>
                 <p class="info">
-                  <i class="fas fa-phone-alt"></i> +44 (0) 20 9994 7740
+                  <i class="fas fa-phone-alt"></i> +46 76 005 56 58
                 </p>
                 <p class="info">
-                  <i class="fas fa-envelope"></i> themefaxbd@gmail.com
+                  <i class="fas fa-envelope"></i> josef.jabarkhel@yumfoods.se
                 </p>
                 <p class="info">
-                  <i class="far fa-map-marker-alt"></i> Blackwell Street,Dry
-                  Creek,Alaska
+                  <i class="far fa-map-marker-alt"></i> Stora Badhusgatan 18,
+                  411 21 Göteborg
                 </p>
               </div>
             </div>
