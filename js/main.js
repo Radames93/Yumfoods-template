@@ -361,3 +361,186 @@ $(function () {
 
 
 });
+
+let yum = document.getElementById("yum")
+let daily = document.getElementById("daily")
+let premium = document.getElementById("premium")
+
+const searchBar = document.getElementById('searchbar')
+
+let yumProductsList = [];
+let dailyProductsList = [];
+let premiumProductsList = [];
+
+searchBar.addEventListener("keyup", (e) => {
+    const searchString = e.target.value.toLowerCase()
+    const filteredYumProducts = yumProductsList.filter((product) => { 
+         return (product.title.toLowerCase().includes(searchString));
+    })
+    yumProducts(filteredYumProducts)
+
+    const filteredDailyProducts = dailyProductsList.filter((product) => { 
+         return (product.title.toLowerCase().includes(searchString));
+    })
+    dailyProducts(filteredDailyProducts)
+
+    const filteredPremiumProducts = premiumProductsList.filter((product) => { 
+         return (product.title.toLowerCase().includes(searchString));
+    })
+    premiumProducts(filteredPremiumProducts)
+});
+
+
+const loadProducts = async () => {
+    try {
+        await fetch("./js/products.json")
+            .then((response) => response.json())
+            .then((data) => {
+                yumProductsList = data.yum
+                dailyProductsList = data.daily
+                premiumProductsList = data.premium
+            })
+        yumProducts(yumProductsList)
+        dailyProducts(dailyProductsList)
+        premiumProducts(premiumProductsList)
+    } catch (err) {
+        console.log(err)
+    }
+}
+const yumProducts = (yumProductsList) => {
+        if (yum !== null) {
+        const htmlString = yumProductsList.map((yum) => {
+            return `<div
+            class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp "
+            data-wow-duration="1s"
+                        >
+          <div class="menu_item">
+              <div class="menu_item_img">
+                <img
+                  src=`+ yum.img + `
+                  alt="menu"
+                  class="img-fluid w-100"
+                />
+              </div>
+              <div class="menu_item_text">
+                <a class="category" href="#">`+ yum.category + `</a>
+                <a
+                  class="title"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#yumModal"
+                  >`+ yum.title + `</a
+                >
+                <h5 class="price">`+ yum.price + `</h5>
+                <a class="add_to_cart" href="#">lägg till varukorgen</a>
+                <ul class="d-flex flex-wrap justify-content-end">
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="menu_details.html"><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>`
+        }).join('');
+        yum.innerHTML = htmlString;
+        } else {
+        return null
+    }
+}
+
+const dailyProducts = (dailyProductsList) => {
+    if (daily !== null) {
+        const htmlString = dailyProductsList.map((daily) => {
+            return `<div
+            class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp "
+            data-wow-duration="1s"
+                        >
+          <div class="menu_item">
+              <div class="menu_item_img">
+                <img
+                  src=`+ daily.img + `
+                  alt="menu"
+                  class="img-fluid w-100"
+                />
+              </div>
+              <div class="menu_item_text">
+                <a class="category" href="#">`+ daily.category + `</a>
+                <a
+                  class="title"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#yumModal"
+                  >`+ daily.title + `</a
+                >
+                <h5 class="price">`+ daily.price + `</h5>
+                <a class="add_to_cart" href="#">lägg till varukorgen</a>
+                <ul class="d-flex flex-wrap justify-content-end">
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="menu_details.html"><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>`
+        }).join('');
+        daily.innerHTML = htmlString;
+    } else {
+        return null
+    }
+}
+
+const premiumProducts = (premiumProductsList) => {
+    if (premium !== null) {
+        const htmlString = premiumProductsList.map((premium) => {
+            return `<div
+            class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp "
+            data-wow-duration="1s"
+                        >
+          <div class="menu_item">
+              <div class="menu_item_img">
+                <img
+                  src=`+ premium.img + `
+                  alt="menu"
+                  class="img-fluid w-100"
+                />
+              </div>
+              <div class="menu_item_text">
+                <a class="category" href="#">`+ premium.category + `</a>
+                <a
+                  class="title"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#yumModal"
+                  >`+ premium.title + `</a
+                >
+                <h5 class="price">`+ premium.price + `</h5>
+                <a class="add_to_cart" href="#">lägg till varukorgen</a>
+                <ul class="d-flex flex-wrap justify-content-end">
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="menu_details.html"><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>`
+        }).join('');
+        premium.innerHTML = htmlString;
+    } else {
+        return null
+    }
+}
+
+
+loadProducts();
+
+
+

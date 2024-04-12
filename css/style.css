@@ -5986,3 +5986,7 @@ footer {
 .contacts-box {
   display: flex;
 }
+
+.hide {
+  display: none;
+}
