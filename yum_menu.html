@@ -165,13 +165,16 @@
                   <select
                     class="select_js"
                     id="sort"
-                    onchange="sortingFuntion()"
+                    onchange="sortingFunction(this)"
                   >
                     <option value="AL">standardsortering</option>
-                    <option value="sortName">sortera efter namn</option>
-                    <option value="">sortera efter senaste</option>
-                    <option value="">sortera efter priset(låg till hög)</option>
-                    <option value="">sortera efter priset(hög till låg)</option>
+                    <option value="name">sortera efter namn</option>
+                    <option value="l2h">
+                      sortera efter priset(låg till hög)
+                    </option>
+                    <option value="h2l">
+                      sortera efter priset(hög till låg)
+                    </option>
                   </select>
                 </div>
               </div>

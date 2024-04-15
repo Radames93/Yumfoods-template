@@ -162,13 +162,19 @@
             <div class="col-lg-4 col-md-4">
               <div class="menu_search">
                 <div class="select_area">
-                  <select class="select_js">
+                  <select
+                    class="select_js"
+                    id="sort"
+                    onchange="sortingFunction(this)"
+                  >
                     <option value="AL">standardsortering</option>
-                    <option value="">sortera efter popularitet</option>
-                    <option value="">sortera efter genomsnittligt betyg</option>
-                    <option value="">sortera efter senaste</option>
-                    <option value="">sortera efter låg till hög</option>
-                    <option value="">sortera efter hög till låg</option>
+                    <option value="name">sortera efter namn</option>
+                    <option value="l2h">
+                      sortera efter priset(låg till hög)
+                    </option>
+                    <option value="h2l">
+                      sortera efter priset(hög till låg)
+                    </option>
                   </select>
                 </div>
               </div>

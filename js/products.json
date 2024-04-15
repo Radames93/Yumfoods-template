@@ -19,7 +19,7 @@
             "category": "Biryani",
             "img": "images/menu2_img.png",
             "title": "Spicy Burger",
-            "price": "75kr"
+            "price": "115kr"
         },
          {
             "id": 4,
@@ -33,7 +33,7 @@
             "category": "Biryani",
             "img": "images/menu2_img.png",
             "title": "Mozzarella sticks",
-            "price": "75kr"
+            "price": "95kr"
         },
          {
             "id": 6,
@@ -47,14 +47,14 @@
             "category": "Biryani",
             "img": "images/menu2_img.png",
             "title": "Chicken wings",
-            "price": "75kr"
+            "price": "115kr"
         },
          {
             "id": 8,
             "category": "Biryani",
             "img": "images/menu2_img.png",
             "title": "Onion rings",
-            "price": "75kr"
+            "price": "85kr"
         }
     ],
      "daily": [
@@ -70,7 +70,7 @@
             "category": "Biryani",
             "img": "images/menu3_img.png",
             "title": "Daria Shevtsova",
-            "price": "95kr"
+            "price": "155kr"
         },
          {
             "id": 11,
@@ -91,7 +91,7 @@
             "category": "Biryani",
             "img": "images/menu3_img.png",
             "title": "Mozzarella sticks",
-            "price": "95kr"
+            "price": "85kr"
         },
          {
             "id": 14,
@@ -105,7 +105,7 @@
             "category": "Biryani",
             "img": "images/menu3_img.png",
             "title": "Chicken wings",
-            "price": "95kr"
+            "price": "85kr"
         },
          {
             "id": 16,
@@ -135,7 +135,7 @@
             "category": "Biryani",
             "img": "images/menu4_img.png",
             "title": "Spicy Burger",
-            "price": "115kr"
+            "price": "135kr"
         },
          {
             "id": 20,
@@ -149,7 +149,7 @@
             "category": "Biryani",
             "img": "images/menu4_img.png",
             "title": "Mozzarella sticks",
-            "price": "115kr"
+            "price": "135kr"
         },
          {
             "id": 22,
@@ -163,14 +163,14 @@
             "category": "Biryani",
             "img": "images/menu4_img.png",
             "title": "Chicken wings",
-            "price": "115kr"
+            "price": "95kr"
         },
          {
             "id": 24,
             "category": "Biryani",
             "img": "images/menu4_img.png",
             "title": "Onion rings",
-            "price": "115kr"
+            "price": "75kr"
         }
      ]
 }
