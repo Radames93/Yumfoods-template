@@ -118,7 +118,8 @@
           <ul class="menu_icon d-flex flex-wrap">
             <li>
               <a class="cart_icon" href="cart_view.html"
-                ><i class="fas fa-shopping-basket"></i> <span>05</span></a
+                ><i class="fas fa-shopping-basket"></i>
+                <span id="count">0</span></a
               >
             </li>
             <li>
@@ -178,7 +179,7 @@
                         <a class="clear_all" href="#">ta bort</a>
                       </th>
                     </tr>
-                    <tr>
+                    <tr id="cart-item">
                       <td class="pro_img">
                         <img
                           src="images/menu2_img.png"
@@ -320,7 +321,7 @@
                 <div class="col-xl-5 col-md-6">
                   <div class="cart_list_footer_button_text">
                     <h6>total</h6>
-                    <p>delsumma: <span>285kr</span></p>
+                    <p id="subtotal">delsumma: <span>285kr</span></p>
                     <p>leverans: <span>0kr</span></p>
                     <p>rabatt: <span>10kr</span></p>
                     <p class="total">

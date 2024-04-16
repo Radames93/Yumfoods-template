@@ -349,6 +349,7 @@ $(function () {
   });
 });
 
+//Search function//
 let yum = document.getElementById("yum");
 let daily = document.getElementById("daily");
 let premium = document.getElementById("premium");
@@ -362,24 +363,68 @@ let yumFiltered = [];
 let dailyFiltered = [];
 let premiumFiltered = [];
 
-searchBar.addEventListener("keyup", (e) => {
-  const searchString = e.target.value.toLowerCase();
-  const filteredYumProducts = yumProductsList.filter((product) => {
-    return product.title.toLowerCase().includes(searchString);
-  });
-  yumProducts(filteredYumProducts);
+function mergeThreeSortedArrays(
+  yumProductsList,
+  dailyProductsList,
+  premiumProductsList
+) {
+  let D = [];
 
-  const filteredDailyProducts = dailyProductsList.filter((product) => {
-    return product.title.toLowerCase().includes(searchString);
-  });
-  dailyProducts(filteredDailyProducts);
+  // Insert all elements from A into D
+  for (let i = 0; i < yumProductsList.length; i++) {
+    D.push(A[i]);
+  }
 
-  const filteredPremiumProducts = premiumProductsList.filter((product) => {
-    return product.title.toLowerCase().includes(searchString);
-  });
-  premiumProducts(filteredPremiumProducts);
-});
+  // Insert all elements from B into D
+  for (let i = 0; i < dailyProductsList.length; i++) {
+    D.push(B[i]);
+  }
 
+  // Insert all elements from C into D
+  for (let i = 0; i < premiumProductsList.length; i++) {
+    D.push(C[i]);
+  }
+
+  // Sort the merged array in ascending order
+  D.sort((a, b) => a - b);
+
+  return D;
+}
+
+function main() {
+  // Merge three sorted arrays
+  const D = mergeThreeSortedArrays(A, B, C);
+
+  // Print the merged and sorted array
+  console.log(D.join(" "));
+}
+
+const search = () => {
+  searchBar.addEventListener("keyup", (e) => {
+    const searchString = e.target.value.toLowerCase();
+    const filteredYumProducts = yumProductsList.filter((product) => {
+      return product.title.toLowerCase().includes(searchString);
+    });
+    yumProducts(filteredYumProducts);
+
+    const filteredDailyProducts = dailyProductsList.filter((product) => {
+      return product.title.toLowerCase().includes(searchString);
+    });
+    dailyProducts(filteredDailyProducts);
+
+    const filteredPremiumProducts = premiumProductsList.filter((product) => {
+      return product.title.toLowerCase().includes(searchString);
+    });
+    premiumProducts(filteredPremiumProducts);
+  });
+};
+if (searchBar !== null) {
+  searchBar.addEventListener("input", search);
+} else {
+  removeEventListener("keyup", search);
+}
+
+//Display yum items
 const loadProducts = async () => {
   try {
     await fetch("./js/products.json")
@@ -391,6 +436,7 @@ const loadProducts = async () => {
         yumFiltered = data.yum;
         dailyFiltered = data.daily;
         premiumFiltered = data.premium;
+        a.push(data.yum, data.daily, data.premium);
       });
     yumProducts(yumProductsList);
     dailyProducts(dailyProductsList);
@@ -401,6 +447,7 @@ const loadProducts = async () => {
 };
 const yumProducts = (yumProductsList) => {
   if (yum !== null) {
+    let i = 0;
     const htmlString = yumProductsList
       .map((yum) => {
         return (
@@ -433,9 +480,13 @@ const yumProducts = (yumProductsList) => {
                 >
                 <h5 class="price">` +
           yum.price +
-          `</h5>
-                <a class="add_to_cart" href="#">lägg till varukorgen</a>
-                <ul class="d-flex flex-wrap justify-content-end">
+          `</h5>` +
+          "<button class='add_to_cart' data-id=" +
+          yum.id +
+          " onclick='addToCart(" +
+          i++ +
+          ")'>lägg till     <i class='fas fa-cart-plus'></i></button>" +
+          `<ul class="d-flex flex-wrap justify-content-end">
                   <li>
                     <a href="#"><i class="fal fa-heart"></i></a>
                   </li>
@@ -455,7 +506,9 @@ const yumProducts = (yumProductsList) => {
   }
 };
 
+//Display daily items
 const dailyProducts = (dailyProductsList) => {
+  let i = 0;
   if (daily !== null) {
     const htmlString = dailyProductsList
       .map((daily) => {
@@ -489,8 +542,11 @@ const dailyProducts = (dailyProductsList) => {
                 >
                 <h5 class="price">` +
           daily.price +
-          `</h5>
-                <a class="add_to_cart" href="#">lägg till varukorgen</a>
+          `</h5>` +
+          "<a class='add_to_cart' onclick='addToCart(" +
+          i++ +
+          ")'>lägg till   <i class='fas fa-cart-plus'></i></a>" +
+          `
                 <ul class="d-flex flex-wrap justify-content-end">
                   <li>
                     <a href="#"><i class="fal fa-heart"></i></a>
@@ -511,8 +567,10 @@ const dailyProducts = (dailyProductsList) => {
   }
 };
 
+////Display premium items
 const premiumProducts = (premiumProductsList) => {
   if (premium !== null) {
+    let i = 0;
     const htmlString = premiumProductsList
       .map((premium) => {
         return (
@@ -545,8 +603,11 @@ const premiumProducts = (premiumProductsList) => {
                 >
                 <h5 class="price">` +
           premium.price +
-          `</h5>
-                <a class="add_to_cart" href="#">lägg till varukorgen</a>
+          `</h5>` +
+          "<a class='add_to_cart' onclick='addToCart(" +
+          i++ +
+          ")'>lägg till  <i class='fas fa-cart-plus'></i></a>" +
+          `
                 <ul class="d-flex flex-wrap justify-content-end">
                   <li>
                     <a href="#"><i class="fal fa-heart"></i></a>
@@ -567,6 +628,7 @@ const premiumProducts = (premiumProductsList) => {
   }
 };
 
+//Sort function
 const sortingFunction = (el) => {
   const option = el.value;
   if (option === "name") {
@@ -650,3 +712,78 @@ const sortingFunction = (el) => {
 };
 
 loadProducts();
+
+//Add products to cart and display them in cart_view.html
+
+console.log(a);
+var listCart = [];
+
+function delElement(a) {
+  cart.splice(a, 1);
+  displayCart();
+}
+
+function displayCart(a) {
+  let j = 0;
+  let subtotal = 0;
+  console.log(document.getElementById("count"));
+  document.getElementById("count").innerHTML = cart.length;
+  if (cart.length == 0) {
+    document.getElementById("cartItem").innerHTML = "Din varukorg är tom";
+    document.getElementById("subtotal").innerHTML = "" + 0 + ".00 kr";
+  } else {
+    document.getElementById("cartItem").innerHTML = cart
+      .map((items) => {
+        var { image, title, price } = items;
+        subtotal = subtotal + price;
+        document.getElementById("subtotal").innerHTML =
+          "" + subtotal + ".00 kr";
+        return (
+          `<tr id="cart-item">
+                      <td class="pro_img">
+                        <img
+                          src=${image}
+                          alt="product"
+                          class="img-fluid w-100"
+                        />
+                      </td>
+
+                      <td class="pro_name">
+                        <a href="#">${title}</a>
+                        <span>medium</span>
+                        <p>måndag</p>
+                        <p>datum: MM/DD/YY</p>
+                        <p>Tid: 10-12pm</p>
+                      </td>
+
+                      <td class="pro_status">
+                        <h6>${price}</h6>
+                      </td>
+
+                      <td class="pro_select">
+                        <div class="quentity_btn">
+                          <button class="btn btn-danger">
+                            <i class="fal fa-minus"></i>
+                          </button>
+                          <input type="text" placeholder="1" />
+                          <button class="btn btn-success">
+                            <i class="fal fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+
+                      <td class="pro_tk">
+                        <h6>75kr</h6>
+                      </td>
+
+                      <td class="pro_icon">` +
+          "<i class='far fa-trash-alt' onclick='delElement(" +
+          j++ +
+          ")'></i></div>"`
+                      </td>
+                    </tr>`
+        );
+      })
+      .join("");
+  }
+}

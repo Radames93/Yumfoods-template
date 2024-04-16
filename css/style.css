@@ -569,11 +569,13 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 300px;
 }
 
 #imageContent {
-  width: 431px;
-  height: 500px;
+  width: 350px;
+  height: 350px;
+  vertical-align: top;
 }
 
 .vector {
@@ -583,10 +585,8 @@ button {
 
 .vectorBox {
   width: 457px;
-  height: 474px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 
 .vectorItem {
@@ -630,19 +630,23 @@ button {
 .banner_title {
   font-family: "Playfair Display";
   font-weight: 400;
-  font-size: 80px;
+  font-size: 50px;
   margin: 0;
   color: #2c2f24;
 }
 
 .banner {
-  padding-top: 130px;
+  padding-top: 200px;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  height: 80vh;
+  height: 100vh;
   position: relative;
   overflow: hidden;
+}
+
+.banner_text {
+  padding-top: 20px;
 }
 
 .banner_overlay,
@@ -5954,7 +5958,7 @@ footer {
   justify-content: center;
   height: 34px;
   gap: 32px;
-  margin: 20px 0;
+  margin-top: 50px;
 }
 
 .subscription_image {
