@@ -113,8 +113,8 @@ button {
   --paraColor: #484747;
   --colorBlack: #231f40;
   --colorWhite: #ffffff;
-  --paraFont: "Manrope", sans-serif;
-  --headingFont: "Barlow", sans-serif;
+  --paraFont: "League Spartan", sans-serif;
+  --headingFont: "Inter", sans-serif;
   --cursiveFont: "Oleo Script", cursive;
   --boxShadow: rgba(100, 100, 111, 0.15) 0px 7px 29px 0px;
 }
@@ -200,7 +200,6 @@ button {
 }
 
 .section_heading h2 {
-  text-transform: capitalize;
   font-size: 35px;
   font-weight: 800;
 }
@@ -565,38 +564,6 @@ button {
 
 /* banner start */
 
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-}
-
-#imageContent {
-  width: 350px;
-  height: 350px;
-  vertical-align: top;
-}
-
-.vector {
-  width: 34px;
-  height: 34px;
-}
-
-.vectorBox {
-  width: 457px;
-  display: flex;
-  flex-direction: column;
-}
-
-.vectorItem {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  height: 34px;
-  gap: 32px;
-}
-
 .vectorButton {
   width: 400px;
   height: 48px;
@@ -636,17 +603,12 @@ button {
 }
 
 .banner {
-  padding-top: 200px;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  height: 100vh;
+  height: 110vh;
   position: relative;
   overflow: hidden;
-}
-
-.banner_text {
-  padding-top: 20px;
 }
 
 .banner_overlay,
@@ -775,19 +737,17 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 40px;
 }
 
 .banner_text h1 {
   font-size: 58px;
   font-weight: 700;
-  text-transform: capitalize;
   color: var(--colorWhite);
+  width: 500px;
 }
 
 .banner_text h3 {
   color: var(--colorPrimary) !important;
-  text-transform: capitalize;
   font-size: 30px;
   font-weight: 600;
   margin-top: 10px;
@@ -1223,7 +1183,6 @@ button {
 }
 
 .reservation_form h2 {
-  text-transform: capitalize;
   font-size: 30px;
   font-weight: 600;
   color: var(--colorWhite);
@@ -1543,10 +1502,6 @@ button {
 /* menu item end */
 
 /* team start */
-.team,
-.team_page {
-  background: #ffdfce;
-}
 
 .team .banner_shape_1 {
   width: 200px;
@@ -2003,6 +1958,33 @@ button {
 
 /* testimonial end */
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/index.png");
+  height: 120vh;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: 1.4rem;
+  text-align: center;
+  color: white;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
 /* counter start */
 .counter_part {
   background-position: center !important;
@@ -2289,10 +2271,6 @@ footer {
   background-size: cover !important;
 }
 
-.footer_overlay {
-  background: #ffdfce;
-}
-
 .footer_content .footer_logo {
   width: 200px;
 }
@@ -2428,7 +2406,6 @@ footer {
 
 .footer_bottom {
   padding: 20px 0px;
-  background: #ffdfce;
 }
 
 .scroll_btn {
@@ -4616,14 +4593,12 @@ footer {
   font-weight: 700;
   font-size: 35px;
   color: var(--colorBlack);
-  text-transform: capitalize;
   margin-bottom: 5px;
   text-align: center;
 }
 
 .login_area p {
   color: var(--colorBlack);
-  text-transform: capitalize;
   margin-bottom: 25px;
   text-align: center;
 }
@@ -4683,14 +4658,12 @@ footer {
 .login_area .form-check label {
   color: var(--paraColor);
   margin: 0px;
-  text-transform: capitalize;
   font-size: 16px;
   font-weight: 400;
   margin-top: 1px;
 }
 
 .login_imput a {
-  text-transform: capitalize;
   font-size: 16px;
   font-weight: 400;
   color: var(--colorPrimary);
@@ -4785,7 +4758,6 @@ footer {
 
 .login_area .create_account a {
   color: var(--colorPrimary);
-  text-transform: capitalize;
   font-weight: 500;
   transition: all 0.3s linear 0s;
   -webkit-transition: all 0.3s linear 0s;
@@ -5993,4 +5965,8 @@ footer {
 
 .hide {
   display: none;
+}
+
+.index-img {
+  margin: 0 auto;
 }

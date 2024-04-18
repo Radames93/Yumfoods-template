@@ -362,43 +362,7 @@ let premiumProductsList = [];
 let yumFiltered = [];
 let dailyFiltered = [];
 let premiumFiltered = [];
-
-function mergeThreeSortedArrays(
-  yumProductsList,
-  dailyProductsList,
-  premiumProductsList
-) {
-  let D = [];
-
-  // Insert all elements from A into D
-  for (let i = 0; i < yumProductsList.length; i++) {
-    D.push(A[i]);
-  }
-
-  // Insert all elements from B into D
-  for (let i = 0; i < dailyProductsList.length; i++) {
-    D.push(B[i]);
-  }
-
-  // Insert all elements from C into D
-  for (let i = 0; i < premiumProductsList.length; i++) {
-    D.push(C[i]);
-  }
-
-  // Sort the merged array in ascending order
-  D.sort((a, b) => a - b);
-
-  return D;
-}
-
-function main() {
-  // Merge three sorted arrays
-  const D = mergeThreeSortedArrays(A, B, C);
-
-  // Print the merged and sorted array
-  console.log(D.join(" "));
-}
-
+let all = [];
 const search = () => {
   searchBar.addEventListener("keyup", (e) => {
     const searchString = e.target.value.toLowerCase();
@@ -436,7 +400,11 @@ const loadProducts = async () => {
         yumFiltered = data.yum;
         dailyFiltered = data.daily;
         premiumFiltered = data.premium;
-        a.push(data.yum, data.daily, data.premium);
+        all = [
+          ...yumProductsList,
+          ...dailyProductsList,
+          ...premiumProductsList,
+        ];
       });
     yumProducts(yumProductsList);
     dailyProducts(dailyProductsList);
@@ -543,11 +511,12 @@ const dailyProducts = (dailyProductsList) => {
                 <h5 class="price">` +
           daily.price +
           `</h5>` +
-          "<a class='add_to_cart' onclick='addToCart(" +
+          "<button class='add_to_cart' data-id=" +
+          daily.id +
+          " onclick='addToCart(" +
           i++ +
-          ")'>lägg till   <i class='fas fa-cart-plus'></i></a>" +
-          `
-                <ul class="d-flex flex-wrap justify-content-end">
+          ")'>lägg till     <i class='fas fa-cart-plus'></i></button>" +
+          `<ul class="d-flex flex-wrap justify-content-end">
                   <li>
                     <a href="#"><i class="fal fa-heart"></i></a>
                   </li>
@@ -604,11 +573,12 @@ const premiumProducts = (premiumProductsList) => {
                 <h5 class="price">` +
           premium.price +
           `</h5>` +
-          "<a class='add_to_cart' onclick='addToCart(" +
+          "<button class='add_to_cart' data-id=" +
+          premium.id +
+          " onclick='addToCart(" +
           i++ +
-          ")'>lägg till  <i class='fas fa-cart-plus'></i></a>" +
-          `
-                <ul class="d-flex flex-wrap justify-content-end">
+          ")'>lägg till     <i class='fas fa-cart-plus'></i></button>" +
+          `<ul class="d-flex flex-wrap justify-content-end">
                   <li>
                     <a href="#"><i class="fal fa-heart"></i></a>
                   </li>
@@ -713,33 +683,160 @@ const sortingFunction = (el) => {
 
 loadProducts();
 
+// Make modal fetch data from json file
+
+const yumModal = (yumProductsList) => {
+  if (yum !== null) {
+    let i = 0;
+    const htmlString = yumProductsList
+      .map((yum) => {
+        return `<div class="cart_popup">
+      <div class="modal fade" id="yumModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="fal fa-times"></i>
+              </button>
+              <div class="cart_popup_img">
+                <img
+                  src="images/menu2_img.png"
+                  alt="menu"
+                  class="img-fluid w-100"
+                />
+              </div>
+              <div class="cart_popup_text">
+                <a href="#" class="title">Maxican Pizza Test Better</a>
+                <p class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+                  <span>(201)</span>
+                </p>
+                <h4 class="price">75kr</h4>
+                <div class="details_extra_item">
+                  <h5>Välj ett alternativ <span>(frivill)</span></h5>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="coca-cola"
+                    />
+                    <label class="form-check-label" for="coca-cola">
+                      pepsi 33 cl <span>+ 20kr</span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="7up"
+                    />
+                    <label class="form-check-label" for="7up">
+                      pepsi 33 cl <span>+ 20kr</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="details_quentity">
+                  <h5>Välj kvantitet</h5>
+                  <div
+                    class="quentity_btn_area d-flex flex-wrapa align-items-center"
+                  >
+                    <div class="quentity_btn">
+                      <button class="btn btn-danger">
+                        <i class="fal fa-minus"></i>
+                      </button>
+                      <input type="text" placeholder="1" />
+                      <button class="btn btn-success">
+                        <i class="fal fa-plus"></i>
+                      </button>
+                    </div>
+                    <h3>75kr</h3>
+                  </div>
+                </div>
+                <ul class="details_button_area d-flex flex-wrap">
+                  <li>
+                    <a class="common_btn" href="#">lägg till varukorgen</a>
+                  </li>
+                  <li>
+                    <a class="common_btn" href="menu_details.html"
+                      >visa alla detaljer</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+      })
+      .join("");
+    yum.innerHTML = htmlString;
+  } else {
+    return null;
+  }
+};
+
 //Add products to cart and display them in cart_view.html
 
-console.log(a);
-var listCart = [];
+var cart = [];
+let products = document.getElementsByClassName("menu_item");
+let productId = document.querySelectorAll("[data-id]");
+let product = JSON.parse(localStorage.getItem("ShoppingCart"));
 
+function addToCart(productId) {
+  for (var i = 0; i < all.length; i++) {
+    if (all[i].id == productId) {
+      var cartItem = null;
+      for (var k = 0; k < cart.length; k++) {
+        if (cart[k].all.id == all[i].id) {
+          cartItem = cart[k];
+        }
+      }
+      if (cartItem == null) {
+        var cartItem = {
+          product: all[i],
+        };
+        cart.push(cartItem);
+        console.log(cart);
+      }
+    }
+  }
+}
 function delElement(a) {
   cart.splice(a, 1);
-  displayCart();
+  displaycart();
 }
 
-function displayCart(a) {
-  let j = 0;
-  let subtotal = 0;
-  console.log(document.getElementById("count"));
+const categories = [
+  ...new Set(
+    all.map((item) => {
+      return item;
+    })
+  ),
+];
+
+function displaycart() {
+  let j = 0,
+    total = 0;
   document.getElementById("count").innerHTML = cart.length;
-  if (cart.length == 0) {
-    document.getElementById("cartItem").innerHTML = "Din varukorg är tom";
-    document.getElementById("subtotal").innerHTML = "" + 0 + ".00 kr";
-  } else {
-    document.getElementById("cartItem").innerHTML = cart
-      .map((items) => {
-        var { image, title, price } = items;
-        subtotal = subtotal + price;
-        document.getElementById("subtotal").innerHTML =
-          "" + subtotal + ".00 kr";
-        return (
-          `<tr id="cart-item">
+  const htmlString = cart
+    .map((items) => {
+      var { image, title, price } = items;
+      total = total + price;
+      return (
+        `<tr id="cart-item">
                       <td class="pro_img">
                         <img
                           src=${image}
@@ -775,15 +872,31 @@ function displayCart(a) {
                       <td class="pro_tk">
                         <h6>75kr</h6>
                       </td>
-
                       <td class="pro_icon">` +
-          "<i class='far fa-trash-alt' onclick='delElement(" +
-          j++ +
-          ")'></i></div>"`
+        "<i class='fa-solid fa-trash' onclick='delElement(" +
+        j++ +
+        ")'></i>" +
+        ` 
                       </td>
                     </tr>`
-        );
-      })
-      .join("");
-  }
+      );
+    })
+    .join("");
+  product.innerHTML = htmlString;
 }
+
+let text = document.getElementById("text");
+const onScroll = () => {
+  // Get scroll value
+  const scroll = document.documentElement.scrollTop;
+
+  // If scroll value is more than 0 - means the page is scrolled, add or remove class based on that
+  if (scroll > 1300) {
+    text.classList.add("relative");
+  } else {
+    text.classList.remove("fixed");
+  }
+};
+
+// Use the function
+window.addEventListener("scroll", onScroll);
