@@ -884,19 +884,3 @@ function displaycart() {
     .join("");
   product.innerHTML = htmlString;
 }
-
-let text = document.getElementById("text");
-const onScroll = () => {
-  // Get scroll value
-  const scroll = document.documentElement.scrollTop;
-
-  // If scroll value is more than 0 - means the page is scrolled, add or remove class based on that
-  if (scroll > 1300) {
-    text.classList.add("relative");
-  } else {
-    text.classList.remove("fixed");
-  }
-};
-
-// Use the function
-window.addEventListener("scroll", onScroll);

@@ -143,10 +143,6 @@
     padding: 10px 15px 10px 15px;
   }
 
-  .footer_content .footer_logo {
-    width: 150px;
-  }
-
   .footer_content {
     margin-bottom: 50px;
   }
@@ -639,32 +635,17 @@
     border-radius: 6px;
   }
 
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #imageContent {
-    vertical-align: top;
-  }
-
-  .vector {
-    width: 34px;
-    height: 34px;
-  }
-
-  .vectorBox {
+  .hero {
     display: flex;
     flex-direction: column;
-    width: 457px;
-  }
-
-  .vectorItem {
-    display: flex;
+    background-image: url("../images/index.png");
+    align-self: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: calc(100% - 0px) calc(100% - 80%);
+    height: 50vh;
     align-items: center;
-    height: 34px;
-    gap: 32px;
+    justify-content: space-around;
   }
 
   .vectorButton {
@@ -747,7 +728,7 @@
   }
 
   .banner {
-    height: 60vh;
+    height: 50vh;
   }
 
   .banner_text {
@@ -1804,10 +1785,6 @@
     text-align: left;
   }
 
-  .banner {
-    padding-top: 120px;
-  }
-
   .banner_text h3 {
     font-size: 20px;
   }
@@ -2389,12 +2366,12 @@
   .hero {
     display: flex;
     flex-direction: column;
-    background-image: url("../images/index-mobile.png");
-    height: 100vh;
+    background-image: url("../images/index.png");
     align-self: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: contain;
+    background-position: calc(100% - 0px) calc(100% - 70%);
+    height: 50vh;
     align-items: center;
     justify-content: space-around;
   }
