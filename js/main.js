@@ -353,15 +353,18 @@ $(function () {
 let yum = document.getElementById("yum");
 let daily = document.getElementById("daily");
 let premium = document.getElementById("premium");
+let subscriptions = document.getElementById("subscription");
 
 const searchBar = document.getElementById("searchbar");
 
 let yumProductsList = [];
 let dailyProductsList = [];
 let premiumProductsList = [];
+let subscriptionsProductList = [];
 let yumFiltered = [];
 let dailyFiltered = [];
 let premiumFiltered = [];
+let subscriptionsFiltered = [];
 let all = [];
 const search = () => {
   searchBar.addEventListener("keyup", (e) => {
@@ -381,6 +384,10 @@ const search = () => {
     });
     premiumProducts(filteredPremiumProducts);
   });
+  const filteredSubscriptions = subscriptionsProductList.filter((product) => {
+    return product.title.toLowerCase().includes(searchString);
+  });
+  subscriptionsProducts(filteredSubscriptions);
 };
 if (searchBar !== null) {
   searchBar.addEventListener("input", search);
@@ -397,9 +404,11 @@ const loadProducts = async () => {
         yumProductsList = data.yum;
         dailyProductsList = data.daily;
         premiumProductsList = data.premium;
+        subscriptionsProductList = data.subscriptions;
         yumFiltered = data.yum;
         dailyFiltered = data.daily;
         premiumFiltered = data.premium;
+        subscriptionsFiltered = data.subscriptions;
         all = [
           ...yumProductsList,
           ...dailyProductsList,
@@ -409,6 +418,7 @@ const loadProducts = async () => {
     yumProducts(yumProductsList);
     dailyProducts(dailyProductsList);
     premiumProducts(premiumProductsList);
+    subscriptionsProducts(subscriptionsProductList);
   } catch (err) {
     console.log(err);
   }
@@ -593,6 +603,67 @@ const premiumProducts = (premiumProductsList) => {
       })
       .join("");
     premium.innerHTML = htmlString;
+  } else {
+    return null;
+  }
+};
+
+const subscriptionsProducts = (subscriptionProductList) => {
+  if (subscriptions !== null) {
+    let i = 0;
+    const htmlString = subscriptionProductList
+      .map((subscription) => {
+        return (
+          `
+          <div
+            class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp"
+            data-wow-duration="1s"
+          >
+            <div class="menu_item">
+              <div class="menu_item_img">
+                <img src=` +
+          subscription.img +
+          `
+                  alt="menu"
+                  class="img-fluid w-100"
+                />
+              </div>
+              <div class="menu_item_text">
+                <a class="category" href="#">` +
+          subscription.category +
+          `</a>
+                <a
+                  class="title"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bundlesModal"
+                  >` +
+          subscription.title +
+          `</a
+                >
+                <h5 class="price">` +
+          subscription.price +
+          `</h5>` +
+          "<button class='add_to_cart' data-id=" +
+          subscription.id +
+          " onclick='addToCart(" +
+          i++ +
+          ")'>lägg till     <i class='fas fa-cart-plus'></i></button>" +
+          `<ul class="d-flex flex-wrap justify-content-end">
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="menu_details.html"><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>`
+        );
+      })
+      .join("");
+    subscriptions.innerHTML = htmlString;
   } else {
     return null;
   }
