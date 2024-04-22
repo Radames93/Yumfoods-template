@@ -354,6 +354,7 @@ let yum = document.getElementById("yum");
 let daily = document.getElementById("daily");
 let premium = document.getElementById("premium");
 let subscriptions = document.getElementById("subscription");
+let popup = document.getElementById("popup");
 
 const searchBar = document.getElementById("searchbar");
 
@@ -450,10 +451,14 @@ const yumProducts = (yumProductsList) => {
                 <a
                   class="title"
                   href="#"
+                   data-yum-title=${yum.title}
+                  data-yum-price=${yum.price}
+                  data-yum-img=${yum.img}
+                  data-yum-quantity-price=${yum.price}
                   data-bs-toggle="modal"
-                  data-bs-target="#yumModal"
+                  data-bs-target="#modal"
                   >` +
-          yum.title +
+          yum.title.replace(/'/g, "") +
           `</a
                 >
                 <h5 class="price">` +
@@ -512,10 +517,14 @@ const dailyProducts = (dailyProductsList) => {
                 <a
                   class="title"
                   href="#"
+                   data-yum-title=${daily.title}
+                  data-yum-price=${daily.price}
+                  data-yum-img=${daily.img}
+                  data-yum-quantity-price=${daily.price}
                   data-bs-toggle="modal"
-                  data-bs-target="#yumModal"
+                  data-bs-target="#modal"
                   >` +
-          daily.title +
+          daily.title.replace(/'/g, "") +
           `</a
                 >
                 <h5 class="price">` +
@@ -574,10 +583,14 @@ const premiumProducts = (premiumProductsList) => {
                 <a
                   class="title"
                   href="#"
+                   data-yum-title=${premium.title}
+                  data-yum-price=${premium.price}
+                  data-yum-img=${premium.img}
+                  data-yum-quantity-price=${premium.price}
                   data-bs-toggle="modal"
-                  data-bs-target="#yumModal"
+                  data-bs-target="#modal"
                   >` +
-          premium.title +
+          premium.title.replace(/'/g, "") +
           `</a
                 >
                 <h5 class="price">` +
@@ -755,203 +768,33 @@ const sortingFunction = (el) => {
 loadProducts();
 
 // Make modal fetch data from json file
+var cardModal = document.getElementById("modal");
+if (cardModal !== null) {
+  cardModal.addEventListener("show.bs.modal", function (event) {
+    var button = event.relatedTarget;
+    var title = button.getAttribute("data-yum-title");
+    var price = button.getAttribute("data-yum-price");
+    var img = button.getAttribute("data-yum-img");
+    var quantityPrice = button.getAttribute("data-yum-quantity-price");
 
-const yumModal = (yumProductsList) => {
-  if (yum !== null) {
-    let i = 0;
-    const htmlString = yumProductsList
-      .map((yum) => {
-        return `<div class="cart_popup">
-      <div class="modal fade" id="yumModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="fal fa-times"></i>
-              </button>
-              <div class="cart_popup_img">
-                <img
-                  src="images/menu2_img.png"
-                  alt="menu"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="cart_popup_text">
-                <a href="#" class="title">Maxican Pizza Test Better</a>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="far fa-star"></i>
-                  <span>(201)</span>
-                </p>
-                <h4 class="price">75kr</h4>
-                <div class="details_extra_item">
-                  <h5>Välj ett alternativ <span>(frivill)</span></h5>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="coca-cola"
-                    />
-                    <label class="form-check-label" for="coca-cola">
-                      pepsi 33 cl <span>+ 20kr</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="7up"
-                    />
-                    <label class="form-check-label" for="7up">
-                      pepsi 33 cl <span>+ 20kr</span>
-                    </label>
-                  </div>
-                </div>
+    var modalTitle = cardModal.querySelector(".title");
+    var modalPrice = cardModal.querySelector(".price");
+    var modalImg = cardModal.querySelector("img");
+    var modalQuantityPrice = cardModal.querySelector(".quantity_price");
 
-                <div class="details_quentity">
-                  <h5>Välj kvantitet</h5>
-                  <div
-                    class="quentity_btn_area d-flex flex-wrapa align-items-center"
-                  >
-                    <div class="quentity_btn">
-                      <button class="btn btn-danger">
-                        <i class="fal fa-minus"></i>
-                      </button>
-                      <input type="text" placeholder="1" />
-                      <button class="btn btn-success">
-                        <i class="fal fa-plus"></i>
-                      </button>
-                    </div>
-                    <h3>75kr</h3>
-                  </div>
-                </div>
-                <ul class="details_button_area d-flex flex-wrap">
-                  <li>
-                    <a class="common_btn" href="#">lägg till varukorgen</a>
-                  </li>
-                  <li>
-                    <a class="common_btn" href="menu_details.html"
-                      >visa alla detaljer</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>`;
-      })
-      .join("");
-    yum.innerHTML = htmlString;
-  } else {
-    return null;
-  }
-};
-
-//Add products to cart and display them in cart_view.html
-
-var cart = [];
-let products = document.getElementsByClassName("menu_item");
-let productId = document.querySelectorAll("[data-id]");
-let product = JSON.parse(localStorage.getItem("ShoppingCart"));
-
-function addToCart(productId) {
-  for (var i = 0; i < all.length; i++) {
-    if (all[i].id == productId) {
-      var cartItem = null;
-      for (var k = 0; k < cart.length; k++) {
-        if (cart[k].all.id == all[i].id) {
-          cartItem = cart[k];
-        }
-      }
-      if (cartItem == null) {
-        var cartItem = {
-          product: all[i],
-        };
-        cart.push(cartItem);
-        console.log(cart);
-      }
-    }
-  }
+    localStorage.setItem("title", (modalTitle.textContent = title));
+    localStorage.setItem("price", (modalPrice.textContent = price));
+    localStorage.setItem("img", (modalImg.src = img));
+    localStorage.setItem(
+      "quantity-price",
+      (modalQuantityPrice.textContent = quantityPrice)
+    );
+  });
+} else {
+  null;
 }
-function delElement(a) {
-  cart.splice(a, 1);
-  displaycart();
+function showDiv() {
+  document.getElementById("welcomeDiv").classList.toggle("hide");
 }
 
-const categories = [
-  ...new Set(
-    all.map((item) => {
-      return item;
-    })
-  ),
-];
-
-function displaycart() {
-  let j = 0,
-    total = 0;
-  document.getElementById("count").innerHTML = cart.length;
-  const htmlString = cart
-    .map((items) => {
-      var { image, title, price } = items;
-      total = total + price;
-      return (
-        `<tr id="cart-item">
-                      <td class="pro_img">
-                        <img
-                          src=${image}
-                          alt="product"
-                          class="img-fluid w-100"
-                        />
-                      </td>
-
-                      <td class="pro_name">
-                        <a href="#">${title}</a>
-                        <span>medium</span>
-                        <p>måndag</p>
-                        <p>datum: MM/DD/YY</p>
-                        <p>Tid: 10-12pm</p>
-                      </td>
-
-                      <td class="pro_status">
-                        <h6>${price}</h6>
-                      </td>
-
-                      <td class="pro_select">
-                        <div class="quentity_btn">
-                          <button class="btn btn-danger">
-                            <i class="fal fa-minus"></i>
-                          </button>
-                          <input type="text" placeholder="1" />
-                          <button class="btn btn-success">
-                            <i class="fal fa-plus"></i>
-                          </button>
-                        </div>
-                      </td>
-
-                      <td class="pro_tk">
-                        <h6>75kr</h6>
-                      </td>
-                      <td class="pro_icon">` +
-        "<i class='fa-solid fa-trash' onclick='delElement(" +
-        j++ +
-        ")'></i>" +
-        ` 
-                      </td>
-                    </tr>`
-      );
-    })
-    .join("");
-  product.innerHTML = htmlString;
-}
+document.getElementById("title") = localStorage.getItem("title");

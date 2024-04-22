@@ -4,56 +4,56 @@
       "id": 1,
       "category": "Biryani",
       "img": "images/menu2_img.png",
-      "title": "Hyderabadi Biryani",
+      "title": "'Hyderabadi Biryani'",
       "price": "75kr"
     },
     {
       "id": 2,
       "category": "Biryani",
       "img": "images/menu2_img.png",
-      "title": "Daria Shevtsova",
+      "title": "'Daria Shevtsova'",
       "price": "75kr"
     },
     {
       "id": 3,
       "category": "Biryani",
       "img": "images/menu2_img.png",
-      "title": "Spicy Burger",
+      "title": "'Spicy Burger'",
       "price": "115kr"
     },
     {
       "id": 4,
       "category": "Biryani",
       "img": "images/menu2_img.png",
-      "title": "Fried Chicken",
+      "title": "'Fried Chicken'",
       "price": "75kr"
     },
     {
       "id": 5,
       "category": "Biryani",
       "img": "images/menu2_img.png",
-      "title": "Mozzarella sticks",
+      "title": "'Mozzarella sticks'",
       "price": "95kr"
     },
     {
       "id": 6,
       "category": "Biryani",
       "img": "images/menu2_img.png",
-      "title": "Popcorn chicken",
+      "title": "'Popcorn chicken'",
       "price": "75kr"
     },
     {
       "id": 7,
       "category": "Biryani",
       "img": "images/menu2_img.png",
-      "title": "Chicken wings",
+      "title": "'Chicken wings'",
       "price": "115kr"
     },
     {
       "id": 8,
       "category": "Biryani",
       "img": "images/menu2_img.png",
-      "title": "Onion rings",
+      "title": "'Onion rings'",
       "price": "85kr"
     }
   ],
@@ -62,56 +62,56 @@
       "id": 9,
       "category": "Biryani",
       "img": "images/menu3_img.png",
-      "title": "Hyderabadi Biryani",
+      "title": "'Hyderabadi Biryani'",
       "price": "95kr"
     },
     {
       "id": 10,
       "category": "Biryani",
       "img": "images/menu3_img.png",
-      "title": "Daria Shevtsova",
+      "title": "'Daria Shevtsova'",
       "price": "155kr"
     },
     {
       "id": 11,
       "category": "Biryani",
       "img": "images/menu3_img.png",
-      "title": "Spicy Burger",
+      "title": "'Spicy Burger'",
       "price": "95kr"
     },
     {
       "id": 12,
       "category": "Biryani",
       "img": "images/menu3_img.png",
-      "title": "Fried Chicken",
+      "title": "'Fried Chicken'",
       "price": "95kr"
     },
     {
       "id": 13,
       "category": "Biryani",
       "img": "images/menu3_img.png",
-      "title": "Mozzarella sticks",
+      "title": "'Mozzarella sticks'",
       "price": "85kr"
     },
     {
       "id": 14,
       "category": "Biryani",
       "img": "images/menu3_img.png",
-      "title": "Popcorn chicken",
+      "title": "'Popcorn chicken'",
       "price": "95kr"
     },
     {
       "id": 15,
       "category": "Biryani",
       "img": "images/menu3_img.png",
-      "title": "Chicken wings",
+      "title": "'Chicken wings'",
       "price": "85kr"
     },
     {
       "id": 16,
       "category": "Biryani",
       "img": "images/menu3_img.png",
-      "title": "Onion rings",
+      "title": "'Onion rings'",
       "price": "95kr"
     }
   ],
@@ -120,56 +120,56 @@
       "id": 17,
       "category": "Biryani",
       "img": "images/menu4_img.png",
-      "title": "Hyderabadi Biryani",
+      "title": "'Hyderabadi Biryani'",
       "price": "115kr"
     },
     {
       "id": 18,
       "category": "Biryani",
       "img": "images/menu4_img.png",
-      "title": "Daria Shevtsova",
+      "title": "'Daria Shevtsova'",
       "price": "115kr"
     },
     {
       "id": 19,
       "category": "Biryani",
       "img": "images/menu4_img.png",
-      "title": "Spicy Burger",
+      "title": "'Spicy Burger'",
       "price": "135kr"
     },
     {
       "id": 20,
       "category": "Biryani",
       "img": "images/menu4_img.png",
-      "title": "Fried Chicken",
+      "title": "'Fried Chicken'",
       "price": "115kr"
     },
     {
       "id": 21,
       "category": "Biryani",
       "img": "images/menu4_img.png",
-      "title": "Mozzarella sticks",
+      "title": "'Mozzarella sticks'",
       "price": "135kr"
     },
     {
       "id": 22,
       "category": "Biryani",
       "img": "images/menu4_img.png",
-      "title": "Popcorn chicken",
+      "title": "'Popcorn chicken'",
       "price": "115kr"
     },
     {
       "id": 23,
       "category": "Biryani",
       "img": "images/menu4_img.png",
-      "title": "Chicken wings",
+      "title": "'Chicken wings'",
       "price": "95kr"
     },
     {
       "id": 24,
       "category": "Biryani",
       "img": "images/menu4_img.png",
-      "title": "Onion rings",
+      "title": "'Onion rings'",
       "price": "75kr"
     }
   ],
@@ -178,28 +178,28 @@
       "id": 25,
       "category": "In stock",
       "img": "images/subscriptions_bk.png",
-      "title": "All Inclusive - 1 Person/Vecka",
+      "title": "'All Inclusive - 1 Person/Vecka'",
       "price": "69kr"
     },
     {
       "id": 26,
       "category": "In stock",
       "img": "images/subscriptions_bk.png",
-      "title": "All Inclusive - 1 Person/Vecka",
+      "title": "'All Inclusive - 1 Person/Vecka'",
       "price": "69kr"
     },
     {
       "id": 27,
       "category": "In stock",
       "img": "images/subscriptions_bk.png",
-      "title": "All Inclusive - 1 Person/Vecka",
+      "title": "'All Inclusive - 1 Person/Vecka'",
       "price": "69kr"
     },
     {
       "id": 28,
       "category": "In stock",
       "img": "images/subscriptions_bk.png",
-      "title": "All Inclusive - 1 Person/Vecka",
+      "title": "'All Inclusive - 1 Person/Vecka'",
       "price": "69kr"
     }
   ]
