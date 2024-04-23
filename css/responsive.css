@@ -1765,10 +1765,16 @@
   .details_quentity {
     display: flex;
     flex-direction: column;
-    align-content: start;
-    justify-items: start;
+    flex-wrap: wrap;
+    align-content: unset;
+    justify-content: unset !important;
     align-items: unset;
     gap: 10px;
+    margin-top: 0;
+  }
+
+  .quantity_margin {
+    margin-top: 0;
   }
 
   .banner_title {

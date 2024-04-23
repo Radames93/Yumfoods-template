@@ -793,8 +793,48 @@ if (cardModal !== null) {
 } else {
   null;
 }
+
+//Show ingredients div
 function showDiv() {
   document.getElementById("welcomeDiv").classList.toggle("hide");
 }
 
-document.getElementById("title") = localStorage.getItem("title");
+//Show data into menu_details page based on the modal clicked
+const detailsTitle = localStorage.getItem("title");
+const detailsPrice = localStorage.getItem("price");
+const detailsQuantityPrice = localStorage.getItem("quantity-price");
+const detailsImg = localStorage.getItem("img");
+const existingTitle = document.getElementById("title");
+if (existingTitle !== null) {
+  document.getElementById("title").textContent = detailsTitle;
+  document.getElementById("price").textContent = detailsPrice;
+  document.getElementById("quantity-price").textContent = detailsQuantityPrice;
+  const imgArray = document.querySelectorAll(".zoom");
+  for (let i = 0; i < Object.entries(imgArray).length; i++)
+    imgArray[i].src = detailsImg;
+} else {
+  null;
+}
+
+//Increase or descrease quantity functionality
+
+const increase = document.querySelectorAll(".increase");
+const decrease = document.querySelectorAll(".decrease");
+
+increase.forEach((btn) => {
+  btn.addEventListener("click", increment);
+});
+
+decrease.forEach((btn) => {
+  btn.addEventListener("click", decrement);
+});
+
+function increment() {
+  const inp = this.previousElementSibling;
+  inp.value = Number(inp.value) + 1;
+}
+
+function decrement() {
+  const inp = this.nextElementSibling;
+  if (inp.value > 0) inp.value = Number(inp.value) - 1;
+}
