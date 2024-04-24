@@ -431,7 +431,7 @@ const yumProducts = (yumProductsList) => {
       .map((yum) => {
         return (
           `<div
-            class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp "
+            class="col-xl-4 col-sm-6 col-lg-3 wow fadeInUp "
             data-wow-duration="1s"
                         >
           <div class="menu_item">
@@ -455,6 +455,8 @@ const yumProducts = (yumProductsList) => {
                   data-yum-price=${yum.price}
                   data-yum-img=${yum.img}
                   data-yum-quantity-price=${yum.price}
+                  data-yum-description=${yum.description}
+                  data-yum-ingredients=${yum.ingredients}
                   data-bs-toggle="modal"
                   data-bs-target="#modal"
                   >` +
@@ -521,6 +523,8 @@ const dailyProducts = (dailyProductsList) => {
                   data-yum-price=${daily.price}
                   data-yum-img=${daily.img}
                   data-yum-quantity-price=${daily.price}
+                  data-yum-description=${daily.description}
+                  data-yum-ingredients=${daily.ingredients}
                   data-bs-toggle="modal"
                   data-bs-target="#modal"
                   >` +
@@ -587,6 +591,8 @@ const premiumProducts = (premiumProductsList) => {
                   data-yum-price=${premium.price}
                   data-yum-img=${premium.img}
                   data-yum-quantity-price=${premium.price}
+                  data-yum-description=${premium.description}
+                  data-yum-ingredients=${premium.ingredients}
                   data-bs-toggle="modal"
                   data-bs-target="#modal"
                   >` +
@@ -648,10 +654,16 @@ const subscriptionsProducts = (subscriptionProductList) => {
                 <a
                   class="title"
                   href="#"
+                  data-yum-title=${subscription.title}
+                  data-yum-price=${subscription.price}
+                  data-yum-img=${subscription.img}
+                  data-yum-quantity-price=${subscription.price}
+                  data-yum-description=${subscription.description}
+                  data-yum-ingredients=${subscription.ingredients}
                   data-bs-toggle="modal"
-                  data-bs-target="#bundlesModal"
+                  data-bs-target="#modal"
                   >` +
-          subscription.title +
+          subscription.title.replace(/'/g, "") +
           `</a
                 >
                 <h5 class="price">` +
@@ -776,11 +788,15 @@ if (cardModal !== null) {
     var price = button.getAttribute("data-yum-price");
     var img = button.getAttribute("data-yum-img");
     var quantityPrice = button.getAttribute("data-yum-quantity-price");
+    var description = button.getAttribute("data-yum-description");
+    var ingredients = button.getAttribute("data-yum-ingredients");
 
     var modalTitle = cardModal.querySelector(".title");
     var modalPrice = cardModal.querySelector(".price");
     var modalImg = cardModal.querySelector("img");
     var modalQuantityPrice = cardModal.querySelector(".quantity_price");
+    var modalDescription = cardModal.querySelector(".description");
+    var modalIngredients = cardModal.querySelector(".ingredients");
 
     localStorage.setItem("title", (modalTitle.textContent = title));
     localStorage.setItem("price", (modalPrice.textContent = price));
@@ -788,6 +804,14 @@ if (cardModal !== null) {
     localStorage.setItem(
       "quantity-price",
       (modalQuantityPrice.textContent = quantityPrice)
+    );
+    localStorage.setItem(
+      "ingredients",
+      (modalIngredients.innerHTML = ingredients)
+    );
+    localStorage.setItem(
+      "description",
+      (modalDescription.textContent = description)
     );
   });
 } else {
