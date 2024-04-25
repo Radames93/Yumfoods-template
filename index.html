@@ -32,7 +32,7 @@
     <nav class="navbar navbar-expand-lg main_menu">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="images/logo.png" alt="RegFood" class="img-fluid" />
+          <img src="images/logo.png" alt="Logo" class="img-fluid" />
         </a>
         <button
           class="navbar-toggler"
@@ -50,27 +50,31 @@
           <ul class="navbar-nav m-auto">
             <li class="nav-item">
               <a class="nav-link" href="#"
-                >menu <i class="far fa-angle-down"></i
+                >Menu <i class="far fa-angle-down"></i
               ></a>
               <ul class="droap_menu">
-                <li><a href="baguette_menu.html">Baguette</a></li>
+                <li><a href="baguette_menu.html">Baguetter</a></li>
                 <li><a href="bamba_menu.html">Bamba-rätter</a></li>
                 <li><a href="yum_menu.html">Yum-rätter</a></li>
                 <li><a href="daily_menu.html">Dagens-rätter</a></li>
                 <li><a href="premium_menu.html">Premium-rätter</a></li>
               </ul>
             </li>
+            <!--
             <li class="nav-item">
               <a class="nav-link" href="subscription.html">Prenumerationer</a>
             </li>
+            -->
             <li class="nav-item">
               <a class="nav-link" href="about.html">Om oss</a>
             </li>
+            <!--
             <li class="nav-item">
               <a class="nav-link" href="blogs.html">Blog/Podcast</a>
             </li>
+            -->
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Kontakt oss</a>
+              <a class="nav-link" href="contact.html">Kontakta oss</a>
             </li>
           </ul>
           <ul class="menu_icon d-flex flex-wrap">
@@ -127,462 +131,10 @@
         BANNER END
     ==============================-->
 
-    <!-- YUM FOOD POPUT START -->
-    <div class="cart_popup">
-      <div class="modal fade" id="yumModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="fal fa-times"></i>
-              </button>
-              <div class="cart_popup_img">
-                <img
-                  src="images/menu2_img.png"
-                  alt="menu"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="cart_popup_text">
-                <a href="#" class="title">Maxican Pizza Test Better</a>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="far fa-star"></i>
-                  <span>(201)</span>
-                </p>
-                <h4 class="price">75kr</h4>
-                <div class="details_extra_item">
-                  <h5>Välj ett alternativ <span>(frivill)</span></h5>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="coca-cola"
-                    />
-                    <label class="form-check-label" for="coca-cola">
-                      pepsi 33 cl <span>+ 20kr</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="7up"
-                    />
-                    <label class="form-check-label" for="7up">
-                      pepsi 33 cl <span>+ 20kr</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="details_quentity">
-                  <h5>Välj kvantitet</h5>
-                  <div
-                    class="quentity_btn_area d-flex flex-wrapa align-items-center"
-                  >
-                    <div class="quentity_btn">
-                      <button class="btn btn-danger">
-                        <i class="fal fa-minus"></i>
-                      </button>
-                      <input type="text" placeholder="1" />
-                      <button class="btn btn-success">
-                        <i class="fal fa-plus"></i>
-                      </button>
-                    </div>
-                    <h3>75kr</h3>
-                  </div>
-                </div>
-                <ul class="details_button_area d-flex flex-wrap">
-                  <li>
-                    <a class="common_btn" href="#">lägg till varukorgen</a>
-                  </li>
-                  <li>
-                    <a class="common_btn" href="menu_details.html"
-                      >visa alla detaljer</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- YUM FOOD POPUT END -->
-
-    <!-- DAILY FOOD POPUT START -->
-    <div class="cart_popup">
-      <div class="modal fade" id="dailyModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="fal fa-times"></i>
-              </button>
-              <div class="cart_popup_img">
-                <img
-                  src="images/dagens-rätt.png"
-                  alt="menu"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="cart_popup_text">
-                <a href="#" class="title">Maxican Pizza Test Better</a>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="far fa-star"></i>
-                  <span>(201)</span>
-                </p>
-                <h4 class="price">95kr</h4>
-
-                <div class="details_size">
-                  <h5>select size</h5>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="large"
-                      checked
-                    />
-                    <label class="form-check-label" for="large">
-                      large <span>+ $350</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="medium"
-                    />
-                    <label class="form-check-label" for="medium">
-                      medium <span>+ $250</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="small"
-                    />
-                    <label class="form-check-label" for="small">
-                      small <span>+ $150</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="details_extra_item">
-                  <h5>Välj ett alternativ <span>(frivill)</span></h5>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="coca-cola"
-                    />
-                    <label class="form-check-label" for="coca-cola">
-                      pepsi 33 cl <span>+ 20kr</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="7up"
-                    />
-                    <label class="form-check-label" for="7up">
-                      pepsi 33 cl <span>+ 20kr</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="details_quentity">
-                  <h5>Välj kvantitet</h5>
-                  <div
-                    class="quentity_btn_area d-flex flex-wrapa align-items-center"
-                  >
-                    <div class="quentity_btn">
-                      <button class="btn btn-danger">
-                        <i class="fal fa-minus"></i>
-                      </button>
-                      <input type="text" placeholder="1" />
-                      <button class="btn btn-success">
-                        <i class="fal fa-plus"></i>
-                      </button>
-                    </div>
-                    <h3>95kr</h3>
-                  </div>
-                </div>
-                <ul class="details_button_area d-flex flex-wrap">
-                  <li>
-                    <a class="common_btn" href="#">lägg till varukorgen</a>
-                  </li>
-                  <li>
-                    <a class="common_btn" href="menu_details.html"
-                      >visa alla detaljer</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- DAILY FOOD POPUT END -->
-
-    <!-- PREMIUM FOOD POPUT START -->
-    <div class="cart_popup">
-      <div
-        class="modal fade"
-        id="premiumModal"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="fal fa-times"></i>
-              </button>
-              <div class="cart_popup_img">
-                <img
-                  src="images/premium-rätt.png"
-                  alt="menu"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="cart_popup_text">
-                <a href="#" class="title">Maxican Pizza Test Better</a>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="far fa-star"></i>
-                  <span>(201)</span>
-                </p>
-                <h4 class="price">115kr</h4>
-
-                <div class="details_size">
-                  <h5>select size</h5>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="large"
-                      checked
-                    />
-                    <label class="form-check-label" for="large">
-                      large <span>+ $350</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="medium"
-                    />
-                    <label class="form-check-label" for="medium">
-                      medium <span>+ $250</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="small"
-                    />
-                    <label class="form-check-label" for="small">
-                      small <span>+ $150</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="details_extra_item">
-                  <h5>Välj ett alternativ <span>(frivill)</span></h5>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="coca-cola"
-                    />
-                    <label class="form-check-label" for="coca-cola">
-                      pepsi 33 cl <span>+ 20kr</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="7up"
-                    />
-                    <label class="form-check-label" for="7up">
-                      pepsi 33 cl <span>+ 20kr</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="details_quentity">
-                  <h5>Välj kvantitet</h5>
-                  <div
-                    class="quentity_btn_area d-flex flex-wrapa align-items-center"
-                  >
-                    <div class="quentity_btn">
-                      <button class="btn btn-danger">
-                        <i class="fal fa-minus"></i>
-                      </button>
-                      <input type="text" placeholder="1" />
-                      <button class="btn btn-success">
-                        <i class="fal fa-plus"></i>
-                      </button>
-                    </div>
-                    <h3>115kr</h3>
-                  </div>
-                </div>
-                <ul class="details_button_area d-flex flex-wrap">
-                  <li>
-                    <a class="common_btn" href="#">lägg till varukorgen</a>
-                  </li>
-                  <li>
-                    <a class="common_btn" href="menu_details.html"
-                      >visa alla detaljer</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- PREMIUM FOOD POPUT END -->
-
-    <!-- BUNDLES POPUT START -->
-    <div class="cart_popup">
-      <div
-        class="modal fade"
-        id="modal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog .modal-xl">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <i class="fal fa-times"></i>
-              </button>
-              <div class="cart_popup_img">
-                <img src="" class="img-fluid w-100" />
-              </div>
-              <div class="cart_popup_text">
-                <a href="#" class="title"></a>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="far fa-star"></i>
-                  <span>(201)</span>
-                </p>
-                <h4 class="price"></h4>
-
-                <div
-                  class="details_quentity d-flex justify-content-between align-items-start"
-                >
-                  <div>
-                    <h5>Beskrivning:</h5>
-                    <p class="description"></p>
-                  </div>
-                  <div>
-                    <h5 class="text-center">Ingredienser</h5>
-                    <button class="common_btn" onclick="showDiv()">
-                      Visa ingredienser
-                    </button>
-                    <div id="welcomeDiv" class="hide ingredients"></div>
-                  </div>
-                </div>
-
-                <div class="details_quentity">
-                  <h5>Välj kvantitet</h5>
-                  <div
-                    class="quentity_btn_area d-flex flex-wrapa align-items-center"
-                  >
-                    <div class="quentity_btn">
-                      <button class="decrease">
-                        <i class="fal fa-minus"></i>
-                      </button>
-                      <input type="text" value="0" />
-                      <button class="increase">
-                        <i class="fal fa-plus"></i>
-                      </button>
-                    </div>
-                    <h3 class="quantity_price"></h3>
-                  </div>
-                </div>
-                <ul
-                  class="details_button_area d-flex flex-wrap justify-content-between"
-                >
-                  <li>
-                    <button class="common_btn">
-                      lägg till<i class="fas fa-cart-plus"></i>
-                    </button>
-                  </li>
-                  <li>
-                    <a class="common_btn" href="menu_details.html"
-                      >visa alla detaljer</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- BUNDLES POPUT END -->
-
     <!--=============================
         CATEGORIES
     ==============================-->
-    <section class="team mt_100 xs_mt_70 xs_pt_65 pb_95 xs_pb_65">
+    <section class="team mt_50 xs_mt_70 text-center">
       <div class="container">
         <div class="row wow fadeInUp" data-wow-duration="1s">
           <div class="col-md-12 col-lg-12 col-xl-12">
@@ -602,7 +154,7 @@
                   </div>
                   <div class="single_team_text">
                     <a class="add_to_cart" href="baguette_menu.html"
-                      ><h4>Baguette</h4></a
+                      ><h4>Baguetter</h4></a
                     >
                   </div>
                 </div>
@@ -674,510 +226,6 @@
                 </div>
               </div>
             </div>
-            <!--
-            <h3>Bambarätter med ett pris av 55 kr per rätt</h3>
-          </div>
-        </div>
-        <div class="row team_slider">
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/premium-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#cartModal"
-                  ><h4>Chicken</h4></a
-                >
-                <p>Erbjuder en snabb och prisvärd matupplevelse</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/premium-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#cartModal"
-                  ><h4>Meat</h4></a
-                >
-                <p>Erbjuder en snabb och prisvärd matupplevelse</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/premium-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#cartModal"
-                  ><h4>Pizza</h4></a
-                >
-                <p>Erbjuder en snabb och prisvärd matupplevelse</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/premium-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#cartModal"
-                  ><h4>Pasta</h4></a
-                >
-                <p>Erbjuder en snabb och prisvärd matupplevelse</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/premium-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#cartModal"
-                  ><h4>Chicken</h4></a
-                >
-                <p>Erbjuder en snabb och prisvärd matupplevelse</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    -->
-            <!--=============================
-        YUM RÄTT
-    ==============================-->
-            <!--
-      <div class="container">
-        <div class="row wow fadeInUp" data-wow-duration="1s">
-          <div class="col-md-8 col-lg-7 col-xl-6">
-            <h3 class="title_container">
-              Yumrätter med ett pris av 75kr per portion
-            </h3>
-          </div>
-        </div>
-        <div class="row team_slider">
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/snabb-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#yumModal"
-                  ><h4>Chicken</h4></a
-                >
-                <p>
-                  Innehåller traditionella svenska och orientaliska rätter som
-                  tillagas med kärlek och omsorg
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/snabb-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#yumModal"
-                  ><h4>Meat</h4></a
-                >
-                <p>
-                  Innehåller traditionella svenska och orientaliska rätter som
-                  tillagas med kärlek och omsorg
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/snabb-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#yumModal"
-                  ><h4>Pizza</h4></a
-                >
-                <p>
-                  Innehåller traditionella svenska och orientaliska rätter som
-                  tillagas med kärlek och omsorg
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/snabb-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#yumModal"
-                  ><h4>Pasta</h4></a
-                >
-                <p>
-                  Innehåller traditionella svenska och orientaliska rätter som
-                  tillagas med kärlek och omsorg
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/snabb-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#yumModal"
-                  ><h4>Chicken</h4></a
-                >
-                <p>
-                  Innehåller traditionella svenska och orientaliska rätter som
-                  tillagas med kärlek och omsorg
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      -->
-            <!--=============================
-        DAGENS RÄTT
-    ==============================-->
-            <!--
-      <div class="container">
-        <div class="row wow fadeInUp" data-wow-duration="1s">
-          <div class="col-md-8 col-lg-7 col-xl-6">
-            <h3 class="title_container">
-              Dagensrätter med ett pris av 95kr per portion och samma pris per
-              pizza
-            </h3>
-          </div>
-        </div>
-        <div class="row team_slider">
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/dagens-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#dailyModal"
-                  ><h4>Chicken</h4></a
-                >
-                <p>Serverar färska och nygjorda rätter direkt från köket</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/dagens-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#dailyModal"
-                  ><h4>Meat</h4></a
-                >
-                <p>Serverar färska och nygjorda rätter direkt från köket</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/dagens-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#dailyModal"
-                  ><h4>Pizza</h4></a
-                >
-                <p>Serverar färska och nygjorda rätter direkt från köket</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/dagens-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#dailyModal"
-                  ><h4>Pasta</h4></a
-                >
-                <p>Serverar färska och nygjorda rätter direkt från köket.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/dagens-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#dailyModal"
-                  ><h4>Chicken</h4></a
-                >
-                <p>Serverar färska och nygjorda rätter direkt från köket</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      -->
-            <!--=============================
-        PREMIUM RÄTT
-    ==============================-->
-            <!--
-      <div class="container">
-        <div class="row wow fadeInUp" data-wow-duration="1s">
-          <div class="col-md-8 col-lg-7 col-xl-6">
-            <h3 class="title_container">
-              Premiumrätter med ett pris av 115kr per portion
-            </h3>
-          </div>
-        </div>
-        <div class="row team_slider">
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/premium-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#premiumModal"
-                  ><h4>Chicken</h4></a
-                >
-                <p>
-                  Erbjuder autentiska svenska rätter som tillagas från grunden
-                  med noggrannhet
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/premium-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#premiumModal"
-                  ><h4>Meat</h4></a
-                >
-                <p>
-                  Erbjuder autentiska svenska rätter som tillagas från grunden
-                  med noggrannhet
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/premium-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#premiumModal"
-                  ><h4>Pizza</h4></a
-                >
-                <p>
-                  Erbjuder autentiska svenska rätter som tillagas från grunden
-                  med noggrannhet
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/premium-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#premiumModal"
-                  ><h4>Pasta</h4></a
-                >
-                <p>
-                  Erbjuder autentiska svenska rätter som tillagas från grunden
-                  med noggrannhet
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
-            <div class="single_team">
-              <div class="single_team_img">
-                <img
-                  src="images/premium-rätt.png"
-                  alt="team"
-                  class="img-fluid w-100"
-                />
-              </div>
-              <div class="single_team_text">
-                <a
-                  class="add_to_cart"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#premiumModal"
-                  ><h4>Chicken</h4></a
-                >
-                <p>
-                  Erbjuder autentiska svenska rätter som tillagas från grunden
-                  med noggrannhet
-                </p>
-              </div>
-            </div>
-            -->
           </div>
         </div>
       </div>
@@ -1190,6 +238,7 @@
     <!--=============================
         OFFER ITEM START
     ==============================-->
+    <!--
     <section class="offer_item pb_100 xs_pt_65 xs_pb_70">
       <div class="container">
         <div class="row wow fadeInUp" data-wow-duration="1s">
@@ -1266,40 +315,15 @@
         </div>
       </div>
     </section>
+    -->
 
     <!--=============================
         SERVICES START
     ==============================-->
-    <section class="team mt_100 xs_mt_70 xs_pt_65 pb_95 xs_pb_65">
+    <section class="team mt_100 xs_mt_70 text-center">
       <div class="container">
-        <div class="row wow fadeInUp" data-wow-duration="1s">
-          <div class="col-md-8 col-lg-12 col-xl-12">
-            <div class="section_heading mb_25">
-              <h2>Vi erbjuder även unika tjänster.</h2>
-            </div>
-            <div class="contacts-content contacts">
-              <div class="contacts-box">
-                <img
-                  class="contacts-img"
-                  src="./images/phone.png"
-                  alt="phone"
-                />
-                <p>+46 76 005 56 58</p>
-              </div>
-              <div class="contacts-box">
-                <img class="contacts-img" src="./images/mail.png" alt="mail" />
-                <p>josef.jabarkhel@yumfoods.se</p>
-              </div>
-              <div class="contacts-box">
-                <img
-                  class="contacts-img"
-                  src="./images/location-marker.png"
-                  alt="location"
-                />
-                <p>Stora Badhusgatan 18, 411 21 Göteborg</p>
-              </div>
-            </div>
-          </div>
+        <div class="section_heading mb_25">
+          <h2>Vi erbjuder även unika tjänster.</h2>
         </div>
         <div class="row team_slider">
           <div class="col-xl-3 wow fadeInUp" data-wow-duration="1s">
@@ -1317,14 +341,14 @@
             <div class="single_team">
               <div class="single_team_img_services">
                 <img
-                  src="images/yumratter.png"
+                  src="images/private.png"
                   alt="team"
                   class="img-fluid w-100"
                 />
               </div>
               <div class="single_team_text">
                 <h4>Privat</h4>
-                <p>Daglig / Veckovis leverans / Familjbeställningar</p>
+                <p>Veckovis leverans / Familjbeställningar</p>
               </div>
             </div>
           </div>
@@ -1332,13 +356,13 @@
             <div class="single_team">
               <div class="single_team_img_services">
                 <img
-                  src="images/food-1.png"
+                  src="images/events.png"
                   alt="team"
                   class="img-fluid w-100"
                 />
               </div>
               <div class="single_team_text">
-                <h4>Caterings</h4>
+                <h4>Evenemang</h4>
                 <p>
                   Beställ för din speciella händelse
                   <span style="opacity: 0">special event</span>
@@ -1353,12 +377,12 @@
     <!--=============================
         BLOG START
     ==============================-->
+    <!--
     <section class="blog pt_95 xs_pt_65 pb_65 xs_pb_35">
       <div class="container">
         <div class="row wow fadeInUp" data-wow-duration="1s">
           <div class="col-md-8 col-lg-7 col-xl-6">
             <div class="section_heading mb_25">
-              <h4>nyheter & blog</h4>
               <h2>Vår blog and podcast</h2>
             </div>
           </div>
@@ -1501,6 +525,7 @@
         </div>
       </div>
     </section>
+    -->
     <!--=============================
         BLOG END
     ==============================-->
@@ -1511,38 +536,6 @@
     <footer>
       <div class="footer_overlay pt_20 xs_pt_70 xs_pb_20">
         <div class="container wow fadeInUp" data-wow-duration="1s">
-          <div class="row wow fadeInUp text-center" data-wow-duration="1s">
-            <div class="col-md-8 col-lg-12 col-xl-12">
-              <div
-                class="contacts-content contacts justify-content-center w_100"
-              >
-                <div class="contacts-box">
-                  <img
-                    class="contacts-img"
-                    src="./images/phone.png"
-                    alt="phone"
-                  />
-                  <p>+46 76 005 56 58</p>
-                </div>
-                <div class="contacts-box">
-                  <img
-                    class="contacts-img"
-                    src="./images/mail.png"
-                    alt="mail"
-                  />
-                  <p>info@yumfoods.se</p>
-                </div>
-                <div class="contacts-box">
-                  <img
-                    class="contacts-img"
-                    src="./images/location-marker.png"
-                    alt="location"
-                  />
-                  <p>Stora Badhusgatan 18, 411 21 Göteborg</p>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="row justify-content-around pt_50">
             <div class="col-xxl-4 col-lg-4 col-sm-9 col-md-7">
               <div class="footer_content">
@@ -1580,7 +573,7 @@
             <div class="col-xxl-2 col-lg-2 col-sm-5 col-md-5">
               <div class="footer_content">
                 <ul>
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="index.html">Hem</a></li>
                   <li><a href="about.html">Om oss</a></li>
                   <li><a href="contact.html">Kontakta oss</a></li>
                   <li><a href="certificates.html">Certifieringar</a></li>
@@ -1590,16 +583,35 @@
             <div class="col-xxl-2 col-lg-2 col-sm-6 col-md-5 order-md-4">
               <div class="footer_content">
                 <ul>
-                  <li><a href="terms_condition.html">Allmänna Villkor</a></li>
+                  <li><a href="terms_condition.html">Allmänna villkor</a></li>
                   <li><a href="privacy_policy.html">Integritetspolicy</a></li>
-                  <li>
-                    <a href="refund_policy.html">Återbetalningspolicy</a>
-                  </li>
                   <li>
                     <a href="faq.html">FAQ</a>
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row wow fadeInUp text-center" data-wow-duration="1s">
+        <div class="col-md-8 col-lg-12 col-xl-12">
+          <div class="contacts-content contacts justify-content-center w_100">
+            <div class="contacts-box">
+              <img class="contacts-img" src="./images/phone.png" alt="phone" />
+              <p>+46 76 023 49 30</p>
+            </div>
+            <div class="contacts-box">
+              <img class="contacts-img" src="./images/mail.png" alt="mail" />
+              <p>info@yumfoods.se</p>
+            </div>
+            <div class="contacts-box">
+              <img
+                class="contacts-img"
+                src="./images/location-marker.png"
+                alt="location"
+              />
+              <p>Stora Badhusgatan 18, 411 21 Göteborg</p>
             </div>
           </div>
         </div>

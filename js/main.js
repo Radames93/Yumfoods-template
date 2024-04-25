@@ -471,7 +471,8 @@ const yumProducts = (yumProductsList) => {
           " onclick='addToCart(" +
           i++ +
           ")'>lägg till     <i class='fas fa-cart-plus'></i></button>" +
-          `<ul class="d-flex flex-wrap justify-content-end">
+          `<!--
+          <ul class="d-flex flex-wrap justify-content-end">
                   <li>
                     <a href="#"><i class="fal fa-heart"></i></a>
                   </li>
@@ -479,6 +480,7 @@ const yumProducts = (yumProductsList) => {
                     <a href="menu_details.html"><i class="far fa-eye"></i></a>
                   </li>
                 </ul>
+                -->
               </div>
             </div>
           </div>`
@@ -539,7 +541,9 @@ const dailyProducts = (dailyProductsList) => {
           " onclick='addToCart(" +
           i++ +
           ")'>lägg till     <i class='fas fa-cart-plus'></i></button>" +
-          `<ul class="d-flex flex-wrap justify-content-end">
+          `
+          <!--
+          <ul class="d-flex flex-wrap justify-content-end">
                   <li>
                     <a href="#"><i class="fal fa-heart"></i></a>
                   </li>
@@ -547,6 +551,7 @@ const dailyProducts = (dailyProductsList) => {
                     <a href="menu_details.html"><i class="far fa-eye"></i></a>
                   </li>
                 </ul>
+                -->
               </div>
             </div>
           </div>`
@@ -607,7 +612,9 @@ const premiumProducts = (premiumProductsList) => {
           " onclick='addToCart(" +
           i++ +
           ")'>lägg till     <i class='fas fa-cart-plus'></i></button>" +
-          `<ul class="d-flex flex-wrap justify-content-end">
+          `
+          <!--
+          <ul class="d-flex flex-wrap justify-content-end">
                   <li>
                     <a href="#"><i class="fal fa-heart"></i></a>
                   </li>
@@ -615,6 +622,7 @@ const premiumProducts = (premiumProductsList) => {
                     <a href="menu_details.html"><i class="far fa-eye"></i></a>
                   </li>
                 </ul>
+                -->
               </div>
             </div>
           </div>`
@@ -674,7 +682,9 @@ const subscriptionsProducts = (subscriptionProductList) => {
           " onclick='addToCart(" +
           i++ +
           ")'>lägg till     <i class='fas fa-cart-plus'></i></button>" +
-          `<ul class="d-flex flex-wrap justify-content-end">
+          `
+          <!--
+          <ul class="d-flex flex-wrap justify-content-end">
                   <li>
                     <a href="#"><i class="fal fa-heart"></i></a>
                   </li>
@@ -682,7 +692,7 @@ const subscriptionsProducts = (subscriptionProductList) => {
                     <a href="menu_details.html"><i class="far fa-eye"></i></a>
                   </li>
                 </ul>
-              </div>
+                -->
             </div>
           </div>`
         );
@@ -862,3 +872,167 @@ function decrement() {
   const inp = this.nextElementSibling;
   if (inp.value > 0) inp.value = Number(inp.value) - 1;
 }
+
+function showCompanyForm() {
+  let contactForm = document.getElementById("form");
+  if (contactForm !== null) {
+    contactForm.innerHTML = `<div class="col-xl-12">
+                    <div class="contact_form_input">
+                      <span><i class="fas fa-user"></i></span>
+                      <input type="text" placeholder="Namn" />
+                    </div>
+                  </div>
+                  <div class="col-xl-12">
+                    <div class="contact_form_input">
+                      <span><i class="fas fa-user"></i></span>
+                      <input type="text" placeholder="Företagsnamn" />
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="contact_form_input">
+                      <span><i class="fas fa-user"></i></span>
+                      <input type="text" placeholder="Roll" />
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="contact_form_input">
+                      <span><i class="fas fa-user"></i></span>
+                      <input type="number" placeholder="Antal anställda" />
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="contact_form_input">
+                      <span><i class="fas fa-envelope"></i></span>
+                      <input type="email" placeholder="Mejl" />
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="contact_form_input">
+                      <span><i class="fas fa-phone-alt"></i></span>
+                      <input type="text" placeholder="Telefonnummer" />
+                    </div>
+                  </div>
+                  <div class="col-xl-12">
+                    <div class="contact_form_input">
+                      <span><i class="fas fa-book"></i></span>
+                      <input type="text" placeholder="Ämne" />
+                    </div>
+                  </div>
+                  <div class="col-xl-12">
+                    <div class="contact_form_input textarea">
+                      <span><i class="fas fa-pen"></i></span>
+                      <textarea rows="5" placeholder="Meddelande"></textarea>
+                    </div>
+                    <button class="common_btn" type="submit">
+                      skicka meddelande
+                    </button>
+                  </div>`;
+  } else {
+    null;
+  }
+}
+
+function showPrivateForm() {
+  let contactForm = document.getElementById("form");
+  if (contactForm !== null) {
+    contactForm.innerHTML = ` <div class="col-xl-12">
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="87201e1e-65e7-469c-a4af-2e22c4d9a017"
+                  />
+                  <div for="name" class="contact_form_input">
+                    <span><i class="fas fa-user"></i></span>
+                    <input name="name" type="text" placeholder="Namn" />
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div for="email" class="contact_form_input">
+                    <span><i class="fas fa-envelope"></i></span>
+                    <input for="email" type="email" placeholder="Mejl" />
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div for="phone" class="contact_form_input">
+                    <span><i class="fas fa-phone-alt"></i></span>
+                    <input
+                      name="phone"
+                      type="text"
+                      placeholder="Telefonnummer"
+                    />
+                  </div>
+                </div>
+                <div class="col-xl-12">
+                  <div for="subject" class="contact_form_input">
+                    <span><i class="fas fa-book"></i></span>
+                    <input name="subject" type="text" placeholder="Ämne" />
+                  </div>
+                </div>
+                <div class="col-xl-12">
+                  <div for="message" class="contact_form_input textarea">
+                    <span><i class="fas fa-pen"></i></span>
+                    <textarea
+                      name="message"
+                      rows="5"
+                      placeholder="Meddelande"
+                    ></textarea>
+                  </div>
+                  <div class="h-captcha" data-captcha="true"></div>
+                  <button class="common_btn" type="submit">
+                    skicka meddelande
+                  </button>
+                </div>
+                <div id="result"></div>
+              </div>`;
+  } else {
+    null;
+  }
+}
+
+let company_button = document.getElementById("company_button");
+let private_button = document.getElementById("private_button");
+if (company_button || private_button !== null) {
+  company_button.addEventListener("click", showCompanyForm);
+  private_button.addEventListener("click", showPrivateForm);
+} else {
+  null;
+}
+
+const form = document.getElementById("form");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait...";
+
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: json,
+  })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        result.innerHTML = json.message;
+      } else {
+        console.log(response);
+        result.innerHTML = json.message;
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      result.innerHTML = "Something went wrong!";
+    })
+    .then(function () {
+      form.reset();
+      setTimeout(() => {
+        result.style.display = "none";
+      }, 3000);
+    });
+});

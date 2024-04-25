@@ -339,7 +339,6 @@ button {
   position: fixed;
   top: 10px;
   width: 100%;
-  height: 100px;
   background: var(--colorWhite);
   z-index: 999;
   transition: all linear 0.3s;
@@ -366,7 +365,6 @@ button {
   font-size: 16px;
   font-weight: 600;
   color: var(--colorBlack);
-  text-transform: capitalize;
   margin: 0px 15px;
   padding: 0;
   transition: all linear 0.3s;
@@ -622,7 +620,7 @@ button {
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  height: 110vh;
+  height: 160vh;
   position: relative;
   overflow: hidden;
 }
@@ -1550,7 +1548,6 @@ button {
   content: "";
   width: 100%;
   height: 30%;
-  background: var(--colorPrimary);
   top: 0;
   left: 0;
   clip-path: polygon(0 0, 100% 0%, 100% 25%, 50% 100%, 0 25%);
@@ -1599,12 +1596,11 @@ button {
 
 .single_team_img_services {
   height: 200px;
-  border: 10px solid var(--colorWhite);
+  border: 10px solid var(--colorPrimary);
   border-radius: 50%;
   box-shadow: var(--boxShadow);
   overflow: hidden;
   margin: 0 auto;
-  background: var(--colorPrimary);
   position: relative;
   z-index: 1;
   transition: all linear 0.3s;
@@ -1976,7 +1972,8 @@ button {
   display: flex;
   flex-direction: column;
   background-image: url("../images/index.png");
-  height: 140vh;
+  margin-top: 120px;
+  height: 160vh;
   align-self: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2354,7 +2351,6 @@ footer {
 
 .footer_content ul li a {
   color: #000000;
-  text-transform: capitalize;
   font-size: 16px;
   margin-top: 15px;
   display: block;
@@ -2486,7 +2482,6 @@ footer {
 
 .breadcrumb_text h1 {
   color: var(--colorWhite);
-  text-transform: capitalize;
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 7px;
@@ -2498,7 +2493,6 @@ footer {
 }
 
 .breadcrumb_text ul li a {
-  text-transform: capitalize;
   color: var(--colorWhite);
   font-size: 16px;
   position: relative;
@@ -3009,6 +3003,12 @@ footer {
   -webkit-animation: roatate linear 30s infinite;
 }
 
+.button_span {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
 @keyframes roatate {
   from {
     transform: rotate(0deg);
@@ -3045,7 +3045,6 @@ footer {
 }
 
 .contact_form {
-  background: #f3f7fb;
   padding: 30px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -3055,7 +3054,6 @@ footer {
 }
 
 .contact_form h3 {
-  text-transform: capitalize;
   font-size: 30px;
   font-weight: 600;
 }
@@ -6003,7 +6001,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   align-self: center;
   justify-content: start;
   gap: 20px;
-  padding-top: 20px;
+  padding: 20px 0;
 }
 
 .contacts-box {
