@@ -877,6 +877,13 @@ function showCompanyForm() {
   let contactForm = document.getElementById("form");
   if (contactForm !== null) {
     contactForm.innerHTML = `<div class="col-xl-12">
+                 <input
+                    type="hidden"
+                    name="access_key"
+                    value="87201e1e-65e7-469c-a4af-2e22c4d9a017"
+                  />
+                  <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                  <input type="checkbox" name="botcheck" id="" style="display: none;">
                     <div class="contact_form_input">
                       <span><i class="fas fa-user"></i></span>
                       <input type="text" placeholder="Namn" />
@@ -923,10 +930,12 @@ function showCompanyForm() {
                       <span><i class="fas fa-pen"></i></span>
                       <textarea rows="5" placeholder="Meddelande"></textarea>
                     </div>
-                    <button class="common_btn" type="submit">
-                      skicka meddelande
-                    </button>
-                  </div>`;
+                  <button class="common_btn" type="submit">
+                    skicka meddelande
+                  </button>
+                </div>
+                <div id="result"></div>
+              </div>`;
   } else {
     null;
   }
@@ -941,6 +950,8 @@ function showPrivateForm() {
                     name="access_key"
                     value="87201e1e-65e7-469c-a4af-2e22c4d9a017"
                   />
+                  <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                  <input type="checkbox" name="botcheck" id="" style="display: none;">
                   <div for="name" class="contact_form_input">
                     <span><i class="fas fa-user"></i></span>
                     <input name="name" type="text" placeholder="Namn" />
@@ -949,7 +960,7 @@ function showPrivateForm() {
                 <div class="col-xl-6">
                   <div for="email" class="contact_form_input">
                     <span><i class="fas fa-envelope"></i></span>
-                    <input for="email" type="email" placeholder="Mejl" />
+                    <input name="email" type="email" placeholder="Mejl" />
                   </div>
                 </div>
                 <div class="col-xl-6">
@@ -977,7 +988,7 @@ function showPrivateForm() {
                       placeholder="Meddelande"
                     ></textarea>
                   </div>
-                  <div class="h-captcha" data-captcha="true"></div>
+                   <div class="h-captcha" data-captcha="true"></div>
                   <button class="common_btn" type="submit">
                     skicka meddelande
                   </button>
