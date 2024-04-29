@@ -874,116 +874,47 @@ function decrement() {
 }
 
 function showCompanyForm() {
-  let contactForm = document.getElementById("form");
+  let contactForm = document.getElementById("company");
   if (contactForm !== null) {
-    contactForm.innerHTML = `<div class="col-xl-12">
-                    <div class="contact_form_input">
-                      <span><i class="fas fa-user"></i></span>
-                      <input type="text" placeholder="Namn" />
-                    </div>
+    contactForm.innerHTML = `
+                    <div class="col-xl-12">
+                  <div for="company name" class="contact_form_input">
+                    <span><i class="fas fa-user"></i></span>
+                    <input
+                      name="company name"
+                      type="text"
+                      placeholder="Företagsnamn"
+                    />
                   </div>
-                  <div class="col-xl-12">
-                    <div class="contact_form_input">
-                      <span><i class="fas fa-user"></i></span>
-                      <input type="text" placeholder="Företagsnamn" />
-                    </div>
+                </div>
+                <div class="d-flex">
+                <div class="col-xl-6">
+                  <div for="role" class="contact_form_input">
+                    <span><i class="fas fa-user"></i></span>
+                    <input name="role" type="text" placeholder="Roll" />
                   </div>
-                  <div class="col-xl-6">
-                    <div class="contact_form_input">
-                      <span><i class="fas fa-user"></i></span>
-                      <input type="text" placeholder="Roll" />
-                    </div>
+                </div>
+                <div class="col-xl-6">
+                  <div for="number of employees" class="contact_form_input">
+                    <span><i class="fas fa-user"></i></span>
+                    <input
+                      name="number of employees"
+                      type="number"
+                      placeholder="Antal anställda"
+                    />
                   </div>
-                  <div class="col-xl-6">
-                    <div class="contact_form_input">
-                      <span><i class="fas fa-user"></i></span>
-                      <input type="number" placeholder="Antal anställda" />
-                    </div>
-                  </div>
-                  <div class="col-xl-6">
-                    <div class="contact_form_input">
-                      <span><i class="fas fa-envelope"></i></span>
-                      <input type="email" placeholder="Mejl" />
-                    </div>
-                  </div>
-                  <div class="col-xl-6">
-                    <div class="contact_form_input">
-                      <span><i class="fas fa-phone-alt"></i></span>
-                      <input type="text" placeholder="Telefonnummer" />
-                    </div>
-                  </div>
-                  <div class="col-xl-12">
-                    <div class="contact_form_input">
-                      <span><i class="fas fa-book"></i></span>
-                      <input type="text" placeholder="Ämne" />
-                    </div>
-                  </div>
-                  <div class="col-xl-12">
-                    <div class="contact_form_input textarea">
-                      <span><i class="fas fa-pen"></i></span>
-                      <textarea rows="5" placeholder="Meddelande"></textarea>
-                    </div>
-                    <button class="common_btn" type="submit">
-                      skicka meddelande
-                    </button>
-                  </div>`;
+                </div>
+                </div>
+                  `;
   } else {
     null;
   }
 }
 
 function showPrivateForm() {
-  let contactForm = document.getElementById("form");
+  let contactForm = document.getElementById("company");
   if (contactForm !== null) {
-    contactForm.innerHTML = ` <div class="col-xl-12">
-                  <input
-                    type="hidden"
-                    name="access_key"
-                    value="87201e1e-65e7-469c-a4af-2e22c4d9a017"
-                  />
-                  <div for="name" class="contact_form_input">
-                    <span><i class="fas fa-user"></i></span>
-                    <input name="name" type="text" placeholder="Namn" />
-                  </div>
-                </div>
-                <div class="col-xl-6">
-                  <div for="email" class="contact_form_input">
-                    <span><i class="fas fa-envelope"></i></span>
-                    <input for="email" type="email" placeholder="Mejl" />
-                  </div>
-                </div>
-                <div class="col-xl-6">
-                  <div for="phone" class="contact_form_input">
-                    <span><i class="fas fa-phone-alt"></i></span>
-                    <input
-                      name="phone"
-                      type="text"
-                      placeholder="Telefonnummer"
-                    />
-                  </div>
-                </div>
-                <div class="col-xl-12">
-                  <div for="subject" class="contact_form_input">
-                    <span><i class="fas fa-book"></i></span>
-                    <input name="subject" type="text" placeholder="Ämne" />
-                  </div>
-                </div>
-                <div class="col-xl-12">
-                  <div for="message" class="contact_form_input textarea">
-                    <span><i class="fas fa-pen"></i></span>
-                    <textarea
-                      name="message"
-                      rows="5"
-                      placeholder="Meddelande"
-                    ></textarea>
-                  </div>
-                  <div class="h-captcha" data-captcha="true"></div>
-                  <button class="common_btn" type="submit">
-                    skicka meddelande
-                  </button>
-                </div>
-                <div id="result"></div>
-              </div>`;
+    contactForm.innerHTML = "";
   } else {
     null;
   }
@@ -991,22 +922,23 @@ function showPrivateForm() {
 
 let company_button = document.getElementById("company_button");
 let private_button = document.getElementById("private_button");
-if (company_button || private_button !== null) {
+if (company_button !== null || private_button !== null) {
   company_button.addEventListener("click", showCompanyForm);
   private_button.addEventListener("click", showPrivateForm);
 } else {
   null;
 }
 
+const contactForm = document.getElementById("contact-form");
 const form = document.getElementById("form");
 const result = document.getElementById("result");
 
-form.addEventListener("submit", function (e) {
+contactForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  const formData = new FormData(form);
+  const formData = new FormData(contactForm);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
-  result.innerHTML = "Please wait...";
+  form.innerHTML = "Please wait...";
 
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
@@ -1019,7 +951,8 @@ form.addEventListener("submit", function (e) {
     .then(async (response) => {
       let json = await response.json();
       if (response.status == 200) {
-        result.innerHTML = json.message;
+        form.innerHTML =
+          "Tack för ditt meddelande. Vi återkommer till dig snart";
       } else {
         console.log(response);
         result.innerHTML = json.message;
@@ -1027,10 +960,10 @@ form.addEventListener("submit", function (e) {
     })
     .catch((error) => {
       console.log(error);
-      result.innerHTML = "Something went wrong!";
+      form.innerHTML = "Something went wrong!";
     })
     .then(function () {
-      form.reset();
+      contactForm.reset();
       setTimeout(() => {
         result.style.display = "none";
       }, 3000);

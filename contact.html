@@ -172,6 +172,7 @@
             data-wow-duration="1s"
           >
             <form
+              id="contact-form"
               class="contact_form text-center"
               action="https://api.web3forms.com/submit"
               method="POST"
@@ -194,6 +195,17 @@
                     name="access_key"
                     value="87201e1e-65e7-469c-a4af-2e22c4d9a017"
                   />
+                  <input
+                    type="hidden"
+                    name="subject"
+                    value="New Submission from Web3Forms"
+                  />
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    id=""
+                    style="display: none"
+                  />
                   <div for="name" class="contact_form_input">
                     <span><i class="fas fa-user"></i></span>
                     <input name="name" type="text" placeholder="Namn" />
@@ -202,7 +214,7 @@
                 <div class="col-xl-6">
                   <div for="email" class="contact_form_input">
                     <span><i class="fas fa-envelope"></i></span>
-                    <input for="email" type="email" placeholder="Mejl" />
+                    <input name="email" type="email" placeholder="Mejl" />
                   </div>
                 </div>
                 <div class="col-xl-6">
@@ -215,6 +227,7 @@
                     />
                   </div>
                 </div>
+                <div id="company"></div>
                 <div class="col-xl-12">
                   <div for="subject" class="contact_form_input">
                     <span><i class="fas fa-book"></i></span>
