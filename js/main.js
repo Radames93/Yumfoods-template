@@ -951,8 +951,10 @@ contactForm.addEventListener("submit", function (e) {
     .then(async (response) => {
       let json = await response.json();
       if (response.status == 200) {
-        form.innerHTML =
-          "Tack för ditt meddelande. Vi återkommer till dig snart";
+        form.innerHTML = `<div class="single_team_text">
+          <h4>Tack för ditt meddelande. Vi återkommer till dig snart</h4>
+          </div>
+          `;
       } else {
         console.log(response);
         result.innerHTML = json.message;
